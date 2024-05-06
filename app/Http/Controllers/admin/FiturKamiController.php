@@ -78,6 +78,6 @@ class FiturKamiController extends Controller
         $fiturkami = FiturKami::findOrFail($id);
         $fiturkami->delete();
 
-        return redirect()->route('admin.fiturkami.delete')->with('success','Fitur data deleted successfully');
+        return redirect()->route('admin.fiturkami.index')->with('success','Fitur data deleted successfully');
     }
 }
