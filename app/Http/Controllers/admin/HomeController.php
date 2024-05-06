@@ -23,12 +23,22 @@ class HomeController extends Controller
             'button_teks' => 'required',
             'button_url' => 'required',
             'home_image' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'icon_app1' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'icon_app2' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
         $homes = Home::find($id);
 
         if ($request->hasFile('home_image')) {
             $imagePath = $request->file('home_image')->store('uploads', 'public');
             $homes->home_image = $imagePath;
+        }
+        if ($request->hasFile('icon_app1')) {
+            $imagePath = $request->file('icon_app1')->store('uploads', 'public');
+            $homes->icon_app1 = $imagePath;
+        }
+        if ($request->hasFile('icon_app2')) {
+            $imagePath = $request->file('icon_app2')->store('uploads', 'public');
+            $homes->icon_app2 = $imagePath;
         }
 
         $homes->update([

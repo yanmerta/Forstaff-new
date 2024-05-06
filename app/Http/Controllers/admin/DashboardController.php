@@ -9,8 +9,8 @@ class DashboardController extends Controller
     {
         public function index(){
             // $data = Home::all();
-            // $pageTitle = 'Admin | Dashboard';
+            $pageTitle = 'Admin | Dashboard';
             // dd($data);
-            return view('backpage.Dashboard');
+            return view('backpage.Dashboard',compact('pageTitle' ));
         }
     }

@@ -35,10 +35,19 @@
         <!--begin::Authentication - Sign-in -->
         <div class="d-flex flex-column flex-lg-row flex-column-fluid">
             <!--begin::Aside-->
-            <div class="d-flex flex-column flex-lg-row-auto w-50 position-xl-relative"
-                style="background-image: url('assets/template_admin/demo1/dist/assets/media/logos/baground.jpg'); background-size: cover; background-position: center;">
+            <div class="d-flex flex-column flex-lg-row-auto w-xl-600px position-xl-relative"
+                style="background-color: #F2C98A">
                 <!--begin::Wrapper-->
-                <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-800px scroll-y">
+                <div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px scroll-y">
+                    <!--begin::Content-->
+                    <div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
+                        <!--begin::Logo-->
+                        <a href="../../demo1/dist/index.html" class="py-9 mb-5">
+                            <img alt="Logo" src="assets/template_admin/demo1/dist/assets/media/logos/logo-2.svg"
+                                class="h-60px" />
+                        </a>
+                    </div>
+                    <!--end::Content-->
                 </div>
                 <!--end::Wrapper-->
             </div>
@@ -60,7 +69,7 @@
                                     <img src="assets/template_admin/demo1/dist/assets/media/logos/forstaff.png"
                                         class="img-fluid" width="150" height="auto">
                                 </a>
-                                <h4 class="mb-3">Selamat Datang, silahkan login akun Admin anda!</h4>
+                                <h1 class="text-dark mb-3">Selamat Datang, silahkan login akun Admin anda!</h1>
                                 <!--end::Title-->
                             </div>
                             <!--begin::Input group-->
@@ -107,8 +116,7 @@
                     <!--begin::Links-->
                     <div class="d-flex flex-center fw-bold fs-6">
                         <span class="text-muted fw-bold me-1">2024©</span>
-                        <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">
-                            By.Trio
+                        <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Trio
                             Undiksha</a>
                     </div>
                 </div>

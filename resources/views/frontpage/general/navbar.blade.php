@@ -13,22 +13,22 @@
     <div class="menu-wrapper" data-top="992">
         <ul class="site-main-menu">
             <li>
-                <a class="current_page" href="https://www.forstaff.id/">Beranda</a>
+                <a class="current_page" href="{{ route('frontpage.beranda') }}">Beranda</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/fitur">Fitur</a>
+                <a class="" href="{{ route('frontpage.fitur') }}">Fitur</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/tentang">Tentang</a>
+                <a class="" href="{{ route('frontpage.tentang') }}">Tentang</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/harga">Harga</a>
+                <a class="" href="{{ route('frontpage.harga') }}">Harga</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/blog">Blog</a>
+                <a class="" href="{{ route('frontpage.blog') }}">Blog</a>
             </li>
             <li>
-                <a class="" href="https://www.forstaff.id/kontak-kami">Kontak Kami</a>
+                <a class="" href="{{ route('frontpage.kontak') }}">Kontak Kami</a>
             </li>
         </ul>
         <div class="nav-right">
