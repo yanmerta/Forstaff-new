@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class AboutController extends Controller
 {
     public function index(){
-        $abouts = About::all();
-        $about = 'Tentang';
+        $about = About::all();
+        $pageTitle = 'Tentang';
         // dd($data);
-        return view('backpage.about.index', compact('abouts','about' ));
+        return view('backpage.about.index', compact('about','pageTitle' ));
     }
 
     public function update(Request $request, $id)
@@ -20,22 +20,25 @@ class AboutController extends Controller
         $validatedData = $request->validate([
             'title_about' => 'required',
             'subtitle_about' => 'required',
-            'description' => 'required|image|mimes:jpeg,png,jpg,svg,gif',
-            'image' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,svg,gif',
             // Add validation for other fields as needed
         ]);
 
-        $abouts = About::find($id);
+        $about = About::findOrFail($id);
 
-        $abouts->update([
-            'title_about' => $validatedData['title_about'],
-            'subtitle_about' => $validatedData['subtitle_about'],
-            'description' => $validatedData['description'],
-            'image' => $validatedData['image'],
-            // Update other fields as needed
-        ]);
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('uploads', 'public');
+            $about->image = $imagePath;
+        }
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        $about->title_about = $validatedData['title_about'];
+        $about->subtitle_about = $validatedData['subtitle_about'];
+        // Update other fields as needed
+
+        $about->save();
+
+        return redirect()->back()->with('success', 'Data tentang berhasil diperbarui');
     }
+
 }
 

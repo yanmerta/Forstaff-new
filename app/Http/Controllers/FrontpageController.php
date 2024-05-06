@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\FiturKami;
 use App\Models\FiturModel;
+use App\Models\FooterKebijakan;
+use App\Models\FooterInformasi;
+use App\Models\Footer;
 use App\Models\Home;
 use App\Models\HomeButton;
+
 use App\Models\HomeInformasi;
+use App\Models\HomeServis;
 use App\Models\Tentang;
 use Illuminate\Http\Request;
-use App\Models\HomeServis;
 
 class FrontpageController extends Controller
 {
@@ -17,8 +21,16 @@ class FrontpageController extends Controller
     public function beranda(){
         $data = Home::all();
         $informasi = HomeInformasi::all();
+
+        $footer = Footer::first();
+        $footer_informasi = FooterInformasi::all();
+        $footer_kebijakan = FooterKebijakan::all();
+
         return view('frontpage.page.beranda', [
             'data'=> $data[0],
+            'footer'=> $footer,
+            'footer_informasi'=> $footer_informasi[0],
+            'footer_kebijakan'=> $footer_kebijakan[0],
             'informasi'=> $informasi[0],
             'fiturkami' => FiturKami::all(),
             'homebutton' => HomeButton::all(),
@@ -36,9 +48,17 @@ class FrontpageController extends Controller
     }
 
 // Halaman Tentang
-    public function tentang(){
-        return view('frontpage.page.tentang');
-    }
+public function tentang(){
+    $about = About::all();
+    $aboutTim = AboutTim::all();
+
+    return view('frontpage.page.tentang', [
+        'about' => $about[0],
+        'aboutTim' => $aboutTim[0],
+        'teams' => Team::all(),
+    ]);
+
+}
 
 // Halaman Harga
     public function harga(){
