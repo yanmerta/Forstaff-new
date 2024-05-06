@@ -5,9 +5,9 @@
         <div class="card mb-5 mb-xl-8">
             <div class="card-header border-0 pt-5 ">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bolder fs-3 mb-8">Fitur Kami</span>
+                    <span class="card-label fw-bolder fs-3 mb-8">Home Servis</span>
                     <div class="card-toolbar">
-                        <a href="{{ route('admin.fiturkami.create') }}" class="btn btn-sm btn-success">
+                        <a href="{{ route('admin.homeservis.create') }}" class="btn btn-sm btn-success">
                             <span class="svg-icon svg-icon-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">
@@ -37,15 +37,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($fiturkami as $key => $fitur)
+                            @foreach ($homeservis as $key => $homeservis)
                                 <tr>
                                     <td style="border: 1px solid #dee2e6;" class="text-center">{{ ++$key }}</td>
-                                    <td style="border: 1px solid #dee2e6;">{{ $fitur->title_fiturkami }}</td>
-                                    <td style="border: 1px solid #dee2e6;">{{ $fitur->description }}</td>
+                                    <td style="border: 1px solid #dee2e6;">{{ $homeservis->servis_title }}</td>
+                                    <td style="border: 1px solid #dee2e6;">{{ $homeservis->servis_description }}</td>
                                     <td style="border: 1px solid #dee2e6;">
-                                        @if ($fitur->image)
-                                            <img src="{{ asset('/storage/public/' . $fitur->image) }}" width="50"
-                                                alt="Fitur Image">
+                                        @if ($homeservis->servis_image)
+                                            <img src="{{ asset('/storage/public/' . $homeservis->servis_image) }}"
+                                                width="50" alt="Fitur Image">
                                         @else
                                             No Image
                                         @endif
@@ -57,12 +57,12 @@
                                                 Actions
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item btn-edit-fitur" data-id="{{ $fitur->id }}"
-                                                    href="{{ route('admin.fiturkami.edit', ['id' => $fitur->id]) }}">
+                                                <a class="dropdown-item btn-edit-fitur" data-id="{{ $homeservis->id }}"
+                                                    href="{{ route('admin.homeservis.edit', ['id' => $homeservis->id]) }}">
                                                     Edit
                                                 </a>
                                                 <form
-                                                    action="{{ route('admin.fiturkami.delete', ['fiturkami' => $fitur->id]) }}"
+                                                    action="{{ route('admin.homeservis.delete', ['homeservis' => $homeservis->id]) }}"
                                                     method="post" id="delete-form">
                                                     @csrf
                                                     @method('delete')

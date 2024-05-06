@@ -42,6 +42,18 @@
                         <img src="{{ asset('/storage/public/' . $homes[0]->home_image) }}" width="50"
                             alt="Current Image">
                     </div>
+                    <div class="mb-3">
+                        <label for="icon_app1" class="form-label">Icon_App1:</label><br>
+                        <input type="file" name="icon_app1" class="form-control-file">
+                        <img src="{{ asset('/storage/public/' . $homes[0]->icon_app1) }}" width="50"
+                            alt="Current Image">
+                    </div>
+                    <div class="mb-3">
+                        <label for="icon_app2" class="form-label">Icon_App2:</label><br>
+                        <input type="file" name="icon_app2" class="form-control-file">
+                        <img src="{{ asset('/storage/public/' . $homes[0]->icon_app2) }}" width="50"
+                            alt="Current Image">
+                    </div>
 
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>

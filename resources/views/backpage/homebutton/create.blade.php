@@ -6,12 +6,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Create New Fitur Kami</h1>
+                        <h1>Create New Home Button</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.fiturkami.index') }}">User List</a></li>
-                            <li class="breadcrumb-item active">Create New Fitur</li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.homebutton.index') }}">Home Button List</a>
+                            </li>
+                            <li class="breadcrumb-item active">Create New Home Button</li>
                         </ol>
                     </div>
                 </div>
@@ -24,24 +25,20 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" action="{{ route('admin.fiturkami.store') }}"
+                                <form method="POST" action="{{ route('admin.homebutton.store') }}"
                                     enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group">
-                                        <label for="title_fiturkami">Title</label>
-                                        <input type="text" class="form-control" id="title_fiturkami"
-                                            name="title_fiturkami" placeholder="Enter Title">
+                                        <label for="button_teks">Button Teks</label>
+                                        <input type="text" class="form-control" id="button_teks"
+                                            name="button_teks" placeholder="Enter Button">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="Enter Description"></textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="image">Image</label>
-                                        <input type="file" class="form-control-file" id="image" name="image">
+                                        <label for="button_image">Button Image</label>
+                                        <input type="file" class="form-control-file" id="button_image"
+                                            name="button_image">
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Create</button>

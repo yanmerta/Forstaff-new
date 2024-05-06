@@ -21,6 +21,8 @@ class Home extends Model
         'button_teks',
         'button_url',
         'home_image',
+        'icon_app1',
+        'icon_app2',
     ];
 }
 

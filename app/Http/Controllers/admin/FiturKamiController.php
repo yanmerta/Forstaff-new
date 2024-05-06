@@ -1,6 +1,7 @@
 <?php
+namespace App\Http\Controllers\admin;
 
-namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
 use App\Models\FiturKami;
 use Illuminate\Http\Request;
@@ -24,7 +25,6 @@ class FiturKamiController extends Controller
     {
         $validatedData = $request->validate([
             'title_fiturkami' => 'required',
-            'subtitle_fiturkami' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,svg,gif',
         ]);
@@ -34,25 +34,23 @@ class FiturKamiController extends Controller
         FiturKami::create([
             'image' => $imagePath,
             'title_fiturkami' => $validatedData['title_fiturkami'],
-            'subtitle_fiturkami' => $validatedData['subtitle_fiturkami'],
             'description' => $validatedData['description'],
         ]);
 
-        return redirect()->route('backpage.fiturKami.create')->with('success','Fitur created successfully');
+        return redirect()->route('admin.fiturkami.index')->with('success','Fitur created successfully');
     }
 
     public function edit($id)
     {
         $fiturkami = FiturKami::find($id);
         $pageTitle = 'Edit Data Fitur ' . $fiturkami->title_fiturkami;
-        return view('backpage.fiturkami.edit', compact('fiturkami'), 'pageTitle');
+        return view('backpage.fiturkami.edit', compact('fiturkami', 'pageTitle'));
     }
 
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
             'title_fiturkami' => 'required',
-            'subtitle_fiturkami' => 'required',
             'description' => 'required',
             'image' => 'sometimes|image|mimes:jpeg,png,jpg,svg,gif',
             // Add validation for other fields as needed
@@ -70,17 +68,16 @@ class FiturKamiController extends Controller
         $fiturkami->update([
             'title_fiturkami' => $validatedData['title_fiturkami'],
             'description' => $validatedData['description'],
-            'subtitle_fiturkami' => $validatedData['subtitle_fiturkami'],
         ]);
 
-        return redirect()->route('backpage.fiturkami.index')->with('success', 'Fitur data updated successfully');
+        return redirect()->route('admin.fiturkami.index')->with('success', 'Fitur data updated successfully');
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
         $fiturkami = FiturKami::findOrFail($id);
         $fiturkami->delete();
 
-        return redirect()->route('backpage.fiturkami.index')->with('success','Fitur data deleted successfully');
+        return redirect()->route('admin.fiturkami.delete')->with('success','Fitur data deleted successfully');
     }
 }

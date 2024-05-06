@@ -43,7 +43,7 @@
                         <span class="bar"></span>
                     </div>
                     <div class="site-mobile-logo">
-                        <a href="https://www.forstaff.id/" class="logo">
+                        <a href="{{ route('frontpage.beranda') }}" class="logo">
                             <img src="https://www.forstaff.id/assets/assets/img/main-logo-forstaff.png"
                                 alt="Forstaff Logo" title="Forstaff Logo" class="main-logo" width="150"
                                 height="48" />
@@ -52,12 +52,12 @@
                                 height="53" />
                         </a>
                     </div>
-@include('frontpage.general.navbar')
+                    @include('frontpage.general.navbar')
                 </div>
             </div>
         </header>
-@yield('content')
-@include('frontpage.general.footer')
+        @yield('content')
+        @include('frontpage.general.footer')
     </div>
     <script async defer type="text/javascript" src="https://www.forstaff.id/assets/assets/js/base.min.js "></script>
 </body>

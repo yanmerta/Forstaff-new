@@ -34,7 +34,7 @@
                                 <th style="border: 1px solid #dee2e6;">Email</th>
                                 <th style="border: 1px solid #dee2e6;">Role</th>
                                 <th style="border: 1px solid #dee2e6;" class="text-center">Status</th>
-                                <th style="border: 1px solid #dee2e6;" width="80">Actions</th>
+                                <th style="border: 1px solid #dee2e6;" class="text-center" width="90">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,7 +50,7 @@
                                             {{ ucfirst($user->status) }}
                                         </span>
                                     </td>
-                                    <td style="border: 1px solid #dee2e6;">
+                                    <td style="border: 1px solid #dee2e6;" class="text-center">
                                         <div class="btn-group dropleft">
                                             <button class="btn btn-success dropdown-toggle" type="button"
                                                 data-toggle="dropdown" aria-expanded="false">
@@ -58,7 +58,7 @@
                                             </button>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item btn-edit-user" data-id="{{ $user->id }}"
-                                                    data-toggle="modal" data-target="#editUserModal">
+                                                    href="{{ route('admin.admin.users.edit', ['user' => $user->id]) }}">
                                                     Edit
                                                 </a>
                                                 <form
@@ -77,93 +77,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="{{ route('admin.admin.users.update', ['user' => $user->id]) }}" method="POST"
-                        enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-
-                        <div class="mb-2">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                value="{{ old('name', $user->name) }}">
-                            @error('name')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                value="{{ old('email', $user->email) }}">
-                            @error('email')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password"
-                                placeholder="Enter new password">
-                            @error('password')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="role" class="form-label">Role</label>
-                            <select class="form-control" id="role" name="role">
-                                <option value="admin" {{ old('role', $user->role) === 'admin' ? 'selected' : '' }}>
-                                    Admin
-                                </option>
-                                <option value="user" {{ old('role', $user->role) === 'user' ? 'selected' : '' }}>
-                                    User
-                                </option>
-                                <!-- Add more role options as needed -->
-                            </select>
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="status" class="form-label">Status</label>
-                            <select class="form-control" id="status" name="status">
-                                <option value="active" {{ old('status', $user->status) === 'active' ? 'selected' : '' }}>
-                                    Active
-                                </option>
-                                <option value="inactive"
-                                    {{ old('status', $user->status) === 'inactive' ? 'selected' : '' }}>
-                                    Inactive
-                                </option>
-                                <!-- Add more status options as needed -->
-                            </select>
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="photo" class="form-label">Profile Photo</label>
-                            <input type="file" class="form-control-file" id="photo" name="photo">
-                            <img src="{{ asset('/storage/public/' . $user->photo) }}" width="100" alt="Current Image"
-                                class="mt-2">
-                            @error('photo')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Update</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

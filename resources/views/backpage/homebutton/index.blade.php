@@ -3,11 +3,11 @@
 @section('content')
     <div id="kt_content_container" class="container-xxl">
         <div class="card mb-5 mb-xl-8">
-            <div class="card-header border-0 pt-5 ">
+            <div class="card-header border-0 pt-5">
                 <h3 class="card-title align-items-start flex-column">
-                    <span class="card-label fw-bolder fs-3 mb-8">Fitur Kami</span>
+                    <span class="card-label fw-bolder fs-3 mb-8">Home Buttons</span>
                     <div class="card-toolbar">
-                        <a href="{{ route('admin.fiturkami.create') }}" class="btn btn-sm btn-success">
+                        <a href="{{ route('admin.homebutton.create') }}" class="btn btn-sm btn-success">
                             <span class="svg-icon svg-icon-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none">
@@ -18,7 +18,7 @@
                                         d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM17 11H13V7C13 6.4 12.6 6 12 6C11.4 6 11 6.4 11 7V11H7C6.4 11 6 11.4 6 12C6 12.6 6.4 13 7 13H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V13H17C17.6 13 18 12.6 18 12C18 11.4 17.6 11 17 11Z"
                                         fill="currentColor" />
                                 </svg>
-                            </span>Add New Fitur
+                            </span>Add New Home Button
                         </a>
                     </div>
                 </h3>
@@ -30,22 +30,20 @@
                         <thead>
                             <tr class="fw-bolder text-muted bg-light">
                                 <th style="border: 1px solid #dee2e6;" class="text-center">No</th>
-                                <th style="border: 1px solid #dee2e6;" class="text-center">Title</th>
-                                <th style="border: 1px solid #dee2e6;" class="text-center">Description</th>
-                                <th style="border: 1px solid #dee2e6;" class="text-center">Image</th>
+                                <th style="border: 1px solid #dee2e6;" class="text-center">Button Text</th>
+                                <th style="border: 1px solid #dee2e6;" class="text-center">Button Image</th>
                                 <th style="border: 1px solid #dee2e6;" class="text-center" width="90">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($fiturkami as $key => $fitur)
+                            @foreach ($homebutton as $key => $homebutton)
                                 <tr>
                                     <td style="border: 1px solid #dee2e6;" class="text-center">{{ ++$key }}</td>
-                                    <td style="border: 1px solid #dee2e6;">{{ $fitur->title_fiturkami }}</td>
-                                    <td style="border: 1px solid #dee2e6;">{{ $fitur->description }}</td>
+                                    <td style="border: 1px solid #dee2e6;">{{ $homebutton->button_teks }}</td>
                                     <td style="border: 1px solid #dee2e6;">
-                                        @if ($fitur->image)
-                                            <img src="{{ asset('/storage/public/' . $fitur->image) }}" width="50"
-                                                alt="Fitur Image">
+                                        @if ($homebutton->button_image)
+                                            <img src="{{ asset('/storage/public/' . $homebutton->button_image) }}"
+                                                width="50" alt="Button Image">
                                         @else
                                             No Image
                                         @endif
@@ -57,12 +55,12 @@
                                                 Actions
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item btn-edit-fitur" data-id="{{ $fitur->id }}"
-                                                    href="{{ route('admin.fiturkami.edit', ['id' => $fitur->id]) }}">
+                                                <a class="dropdown-item btn-edit-fitur" data-id="{{ $homebutton->id }}"
+                                                    href="{{ route('admin.homebutton.edit', ['id' => $homebutton->id]) }}">
                                                     Edit
                                                 </a>
                                                 <form
-                                                    action="{{ route('admin.fiturkami.delete', ['fiturkami' => $fitur->id]) }}"
+                                                    action="{{ route('admin.homebutton.delete', ['homebutton' => $homebutton->id]) }}"
                                                     method="post" id="delete-form">
                                                     @csrf
                                                     @method('delete')

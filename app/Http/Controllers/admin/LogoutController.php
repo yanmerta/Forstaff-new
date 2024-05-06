@@ -13,6 +13,6 @@ class LogoutController extends Controller
     function process()
     {
         Session::flush();
-        return redirect()->route('login');
+        return redirect()->route('login')->with('success', 'kamu berhasil logout');
     }
 }

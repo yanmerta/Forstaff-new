@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\admin;
+
+use App\Http\Controllers\Controller;
 
 use App\Models\FiturModel;
 use Illuminate\Http\Request;
@@ -9,9 +11,8 @@ class FiturController extends Controller
 {
     public function index(){
         $fiturs = FiturModel::all();
-        $fitur = 'Fitur';
-        // dd($data);
-        return view('backpage.fitur.index', compact('fiturs','fitur' ));
+        $pageTitle = 'Fitur';
+        return view('backpage.fitur.index', compact('fiturs','pageTitle' ));
     }
 
     public function update(Request $request, $id)
@@ -26,10 +27,14 @@ class FiturController extends Controller
 
         $fiturs = FiturModel::find($id);
 
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('uploads', 'public');
+            $fiturs->image = $imagePath;
+        }
+
         $fiturs->update([
             'fitur_title' => $validatedData['fitur_title'],
             'subtitle_fitur' => $validatedData['subtitle_fitur'],
-            'image' => $validatedData['image'],
             'description' => $validatedData['description'],
             // Update other fields as needed
         ]);
