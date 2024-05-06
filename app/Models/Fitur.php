@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FiturKami extends Model
+class FiturModel extends Model
 {
     use HasFactory;
-    protected $table = 'fitur_kami';
-    protected $primaryKey = 'id';
-    protected $guarded = ['id'];
-
+    protected $table = 'fitur';
+    protected $primaryKey = 'fitur_id';
     protected $fillable = [
-        'title_fiturkami',
-        'description',
+        'fitur_title',
+        'subtitle_fitur',
         'image',
+        'description'
     ];
 }

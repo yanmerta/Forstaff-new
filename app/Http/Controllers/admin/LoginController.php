@@ -19,7 +19,7 @@ class LoginController extends Controller
             'title' => 'Login',
             'data' => $userData->get(),
         ];
-    
+
         return view('backpage.auth.login', $viewData);
     }
 

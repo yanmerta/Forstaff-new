@@ -99,6 +99,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('fiturkami/{id}/edit', [FiturKamiController::class, 'edit'])->name('fiturkami.edit');
     Route::put('fiturkami/{id}/update', [FiturKamiController::class, 'update'])->name('fiturkami.update');
     Route::delete('fiturkami/{fiturkami}/delete', [FiturKamiController::class, 'delete'])->name('fiturkami.delete');
+<<<<<<< HEAD
 
     // Tentang
     Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
@@ -130,3 +131,38 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
     Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
 });
+=======
+
+    // Tentang
+    Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
+    Route::put('/about/update{id}', [AboutController::class, 'update'])->name('about.update');
+
+    // About Tim
+    Route::get('admin/abouttim', [AboutTimController::class, 'index'])->name('abouttim.index');
+    Route::put('abouttim/{id}/update', [AboutTimController::class, 'update'])->name('abouttim.update');
+
+    // Team
+    Route::get('admin/team', [TeamController::class, 'index'])->name('team.index');
+    Route::get('team/create', [TeamController::class, 'create'])->name('team.create');
+    Route::post('team/store', [TeamController::class, 'store'])->name('team.store');
+    Route::get('team/{id}/edit', [TeamController::class, 'edit'])->name('team.edit');
+    Route::put('team/{id}/update', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('/admin/team/{teams}/delete', [TeamController::class, 'destroy'])->name('team.delete');
+
+    // Harga
+    Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
+    Route::put('/harga/update{id}', [PriceController::class, 'update'])->name('harga.update');
+
+    // footer
+    Route::get('/footer-test', [FooterController::class, 'index'])->name('footer.index');
+    Route::put('/footer/update{id}', [FooterController::class, 'update'])->name('footer.update');
+
+    Route::get('/footer_informasi', [FooterInformasiController::class, 'index'])->name('footer_informasi.index');
+    Route::put('/footer_informasi/update{id}', [FooterInformasiController::class, 'update'])->name('footer_informasi.update');
+
+    Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
+    Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
+});
+
+
+>>>>>>> 82f719f06ff663912a5b49c95598b22e1439c3a0

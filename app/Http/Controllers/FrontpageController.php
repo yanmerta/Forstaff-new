@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 
 class FrontpageController extends Controller
 {
-//Halaman Beranda 
+//Halaman Beranda
     public function beranda(){
         $data = Home::all();
         $informasi = HomeInformasi::all();
@@ -25,7 +25,11 @@ class FrontpageController extends Controller
         $footer = Footer::first();
         $footer_informasi = FooterInformasi::all();
         $footer_kebijakan = FooterKebijakan::all();
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 82f719f06ff663912a5b49c95598b22e1439c3a0
         return view('frontpage.page.beranda', [
             'data'=> $data[0],
             'footer'=> $footer,
