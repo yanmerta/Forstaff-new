@@ -19,8 +19,8 @@ class LoginController extends Controller
             'title' => 'Login',
             'data' => $userData->get(),
         ];
-    
-        return view('backpage.auth.login', $viewData);
+
+        return view('backpage.auth.login2', $viewData);
     }
 
     public function login_proses(Request $request)

@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\Admin\FiturController;
+use App\Http\Controllers\Admin\FiturKamiController;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\admin\LogoutController;
+use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\FrontpageController;
 use App\Http\Controllers\User\AboutPageController;
@@ -13,7 +17,6 @@ use App\Http\Controllers\User\ContactUsController;
 use App\Http\Controllers\User\FiturPageController;
 use App\Http\Controllers\User\PricePageController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -58,10 +61,34 @@ Route::get('/logout', [LogoutController::class, 'process'])->name('logoutProcess
  Route::patch('/profile/{id}', [ProfileController::class,'update',])->name('profile.update');
  Route::delete('/admin/profile/{id}/delete-photo', [ProfileController::class, 'deletePhoto'])->name('profile.delete-photo');
 
-  //Home Page 
+  //Home Page
   Route::get('/admin/home', [HomeController::class, 'index'])->name('home.index');
   Route::put('/home/{id}', [HomeController::class, 'update'])->name('home.update');
 
-  
+        // Fitur
+        Route::get('/fitur',[FiturController::class, 'index'])->name('fitur.index');
+        Route::put('/fitur/update/{id}', [FiturController::class, 'update'])->name('fitur.update');
+
+        // Fitur Kami
+        Route::get('admin/fiturkami', [FiturKamiController::class, 'index'])->name('fiturkami.index');
+        Route::get('fiturkami/create', [FiturKamiController::class, 'create'])->name('fiturkami.create');
+        Route::post('fiturkami/store', [FiturKamiController::class, 'store'])->name('fiturkami.store');
+        Route::get('fiturkami/{id}/edit', [FiturKamiController::class, 'edit'])->name('fiturkami.edit');
+        Route::put('fiturkami/{id}/update', [FiturKamiController::class, 'update'])->name('fiturkami.update');
+        Route::delete('fiturkami/{id}/delete', [FiturKamiController::class, 'destroy'])->name('fiturkami.delete');
+
+        // Tentang
+        Route::get('/tentang', [AboutController::class, 'index'])->name('tentang.index');
+        Route::put('/tentang/update{id}', [AboutController::class, 'update'])->name('tentang.index');
+
+        // Harga
+        Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
+        Route::put('/harga/update{id}', [PriceController::class, 'update'])->name('harga.update');
 });
+
+
+
+
+
+
 
