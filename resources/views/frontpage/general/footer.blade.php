@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
         <div class="footer-nner wow pixFadeUp">
-            <a href="https://www.forstaff.id/" class="logo">
+            <a href="{{ route('frontpage.beranda') }}" class="logo">
                 <img src="https://www.forstaff.id/assets/assets/img/sticky-logo-forstaff.png" alt="Forstaff Logo"
                     title="Forstaff Logo" class="sticky-logo" width="150" height="53" />
             </a>
@@ -51,11 +51,11 @@
                         <h3 class="widget-title">{{ $footer_informasi->title }}</h3>
                         <ul class="footer-menu">
                             <li>
-                                <a class="" href="https://www.forstaff.id/faq">{{ $footer_informasi->faq }}</a>
+                                <a class="" href="{{ route('frontpage.faq') }}">{{ $footer_informasi->faq }}</a>
                             </li>
                             <li>
                                 <a class=""
-                                    href="https://www.forstaff.id/kontak-kami">{{ $footer_informasi->kontak_kami }}</a>
+                                    href="{{ route('frontpage.kontak') }}i">{{ $footer_informasi->kontak_kami }}</a>
                             </li>
                         </ul>
                     </div>
@@ -87,7 +87,7 @@
             <div class="copyright">
                 <p>
                     © 2019 All Rights Reserved Design by
-                    <a href="http://redsystem.id" target="_blank">Red System</a> -
+                    <a href="#" target="_blank">Red System</a> -
                     PT. Guna Teknologi Nusantara
                 </p>
             </div>

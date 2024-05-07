@@ -16,7 +16,7 @@
                             <p class="description wow pixFadeUp" data-wow-delay="0.5s">
                                 {{ $data->home_description }}
                             </p>
-                            <a href="https://www.forstaff.id/tentang" class="pxs-btn banner-btn wow pixFadeUp"
+                            <a href="{{ route('frontpage.tentang') }}" class="pxs-btn banner-btn wow pixFadeUp"
                                 data-wow-delay="0.6s">{{ $data->button_teks }}</a>
                             <div class="margin-top20" data-wow-delay="0.8s">
                                 <img src="{{ asset('/storage/public/' . $data->icon_app1) }}" alt="Desktop dan mobile view"
@@ -100,7 +100,7 @@
                             <p align="justify">
                                 {{ $informasi->description }}
                             </p>
-                            <a href="https://www.forstaff.id/tentang" class="pix-btn wow pixFadeUp"
+                            <a href="{{ route('frontpage.tentang') }}" class="pix-btn wow pixFadeUp"
                                 data-wow-delay="0.9s">{{ $informasi->button_teks }}</a>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                     Ciptakan lingkungan kerja yang bisa anda awasi hanya dengan satu
                     aplikasi
                 </p>
-                <a href="https://www.forstaff.id/harga" class="pix-btn btn-light">Dapatkan Sekarang
+                <a href="{{ route('frontpage.harga') }}" class="pix-btn btn-light">Dapatkan Sekarang
                 </a>
             </div>
         </div>

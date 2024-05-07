@@ -38,7 +38,7 @@
                 <div class="header-inner">
                     <div class="toggle-menu"> <span class="bar"></span> <span class="bar"></span> <span
                             class="bar"></span> </div>
-                    <div class="site-mobile-logo"> <a href="https://www.forstaff.id/" class="logo"> <img
+                    <div class="site-mobile-logo"> <a href="{{ route('frontpage.beranda') }}" class="logo"> <img
                                 src="https://www.forstaff.id/assets/assets/img/main-logo-forstaff.png"
                                 alt="Forstaff Logo" title="Forstaff Logo" class="main-logo" width="150"
                                 height="48"> <img
@@ -47,7 +47,7 @@
                                 height="53"> </a> </div>
                     <nav class="site-nav">
                         <div class="close-menu"> <span>Close</span> <i class="ei ei-icon_close"></i> </div>
-                        <div class="site-logo"> <a href="https://www.forstaff.id/" class="logo"> <img
+                        <div class="site-logo"> <a href="{{ route('frontpage.beranda') }}" class="logo"> <img
                                     src="https://www.forstaff.id/assets/assets/img/main-logo-forstaff.png"
                                     alt="Forstaff Logo" title="Forstaff Logo" class="main-logo" width="150"
                                     height="48"> <img
@@ -63,7 +63,7 @@
                                 <li><a class="" href="{{ route('frontpage.blog') }}">Blog</a></li>
                                 <li><a class="" href="{{ route('frontpage.kontak') }}">Kontak Kami</a></li>
                             </ul>
-                            <div class="nav-right"> <a href="{{ route('frontpage.beranda') }}" target="_blank"
+                            <div class="nav-right"> <a href="#" target="_blank"
                                     class="nav-btn">Daftar Sekarang</a> </div>
                         </div>
                     </nav>
@@ -78,7 +78,7 @@
                 <div class="page-title-wrapper">
                     <h1 class="page-title">Fitur</h1>
                     <ul class="bradcurmed color-white">
-                        <li><a href="https://www.forstaff.id/">Beranda</a></li>
+                        <li><a href="{{ route('frontpage.beranda') }}">Beranda</a></li>
                         <li>Fitur</li>
                     </ul>
                 </div>
@@ -145,7 +145,7 @@
         </section>
         <footer id="footer">
             <div class="container">
-                <div class="footer-nner wow pixFadeUp"> <a href="https://www.forstaff.id/" class="logo"> <img
+                <div class="footer-nner wow pixFadeUp"> <a href="{{ route('frontpage.beranda') }}" class="logo"> <img
                             src="https://www.forstaff.id/assets/assets/img/sticky-logo-forstaff.png"
                             alt="Forstaff Logo" title="Forstaff Logo" class="sticky-logo" width="150"
                             height="53"> </a>
@@ -179,8 +179,8 @@
                             <div class="widget footer-widget">
                                 <h3 class="widget-title">Informasi Tambahan</h3>
                                 <ul class="footer-menu">
-                                    <li><a class="" href="https://www.forstaff.id/faq">FAQ</a></li>
-                                    <li><a class="" href="https://www.forstaff.id/kontak-kami">Kontak Kami</a>
+                                    <li><a class="" href="{{ route('frontpage.faq') }}">FAQ</a></li>
+                                    <li><a class="" href="{{ route('frontpage.kontak') }}">Kontak Kami</a>
                                     </li>
                                 </ul>
                             </div>
@@ -189,9 +189,9 @@
                             <div class="widget footer-widget">
                                 <h3 class="widget-title">Kebijakan dan Syarat</h3>
                                 <ul class="footer-menu">
-                                    <li><a class="" href="https://www.forstaff.id/kebijakan-privasi">Kebijakan
+                                    <li><a class="" href="#">Kebijakan
                                             Privasi</a></li>
-                                    <li><a class="" href="https://www.forstaff.id/syarat-kebutuhan">Syarat
+                                    <li><a class="" href="#">Syarat
                                             Kebutuhan Pengguna Aplikasi</a></li>
                                 </ul> <img src="https://www.forstaff.id/assets/assets/img/google-play-badge.png"
                                     alt="Desktop dan mobile view" title="Desktop dan mobile view"
@@ -205,7 +205,7 @@
                 </div>
                 <div class="site-info wow pixFadeUp" data-wow-delay="0.3s">
                     <div class="copyright">
-                        <p>© 2019 All Rights Reserved Design by <a href="http://redsystem.id" target="_blank">Red
+                        <p>© 2019 All Rights Reserved Design by <a href="#" target="_blank">Red
                                 System</a> - PT. Guna Teknologi Nusantara</p>
                     </div>
                 </div>

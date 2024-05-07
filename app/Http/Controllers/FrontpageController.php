@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\AboutTim;
 use App\Models\FiturKami;
 use App\Models\FiturModel;
-use App\Models\FooterKebijakan;
-use App\Models\FooterInformasi;
 use App\Models\Footer;
+use App\Models\FooterInformasi;
+use App\Models\FooterKebijakan;
 use App\Models\Home;
 use App\Models\HomeButton;
-
 use App\Models\HomeInformasi;
+
 use App\Models\HomeServis;
+use App\Models\KebijakanPrivasi;
+use App\Models\Syarat;
+use App\Models\Team;
 use App\Models\Tentang;
 use Illuminate\Http\Request;
 
@@ -25,11 +30,7 @@ class FrontpageController extends Controller
         $footer = Footer::first();
         $footer_informasi = FooterInformasi::all();
         $footer_kebijakan = FooterKebijakan::all();
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 82f719f06ff663912a5b49c95598b22e1439c3a0
         return view('frontpage.page.beranda', [
             'data'=> $data[0],
             'footer'=> $footer,
@@ -77,5 +78,21 @@ public function tentang(){
 // Halaman Kontak
     public function kontak(){
         return view('frontpage.page.kontak');
+    }
+    public function kebijakan(){
+        $kebijakan =    KebijakanPrivasi::first();
+        return view('frontpage.page.kebijakanprivasi', [
+            'kebijakan'=> $kebijakan,
+        ]);
+    }
+    public function syarat(){
+        $syarat = Syarat::first();
+        return view('frontpage.page.syarat', [
+            'syarat'=> $syarat,
+        ]);
+    }
+    // Halaman FAQ
+    public function faq(){
+        return view('frontpage.page.faq');
     }
 }

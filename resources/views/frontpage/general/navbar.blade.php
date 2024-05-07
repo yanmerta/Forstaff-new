@@ -3,7 +3,7 @@
         <span>Close</span> <i class="ei ei-icon_close"></i>
     </div>
     <div class="site-logo">
-        <a href="https://www.forstaff.id/" class="logo">
+        <a href="{{ route('frontpage.beranda') }}" class="logo">
             <img src="https://www.forstaff.id/assets/assets/img/main-logo-forstaff.png" alt="Forstaff Logo"
                 title="Forstaff Logo" class="main-logo" width="150" height="48" />
             <img src="https://www.forstaff.id/assets/assets/img/sticky-logo-forstaff.png" alt="Forstaff Logo"
@@ -32,7 +32,7 @@
             </li>
         </ul>
         <div class="nav-right">
-            <a href="http://app.forstaff.id/" target="_blank" class="nav-btn">Daftar Sekarang</a>
+            <a href="#" target="_blank" class="nav-btn">Daftar Sekarang</a>
         </div>
     </div>
 </nav>
