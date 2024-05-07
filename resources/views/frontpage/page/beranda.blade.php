@@ -16,7 +16,7 @@
                             <p class="description wow pixFadeUp" data-wow-delay="0.5s">
                                 {{ $data->home_description }}
                             </p>
-                            <a href="https://www.forstaff.id/tentang" class="pxs-btn banner-btn wow pixFadeUp"
+                            <a href="{{ route('frontpage.tentang') }}" class="pxs-btn banner-btn wow pixFadeUp"
                                 data-wow-delay="0.6s">{{ $data->button_teks }}</a>
                             <div class="margin-top20" data-wow-delay="0.8s">
                                 <img src="{{ asset('/storage/public/' . $data->icon_app1) }}" alt="Desktop dan mobile view"

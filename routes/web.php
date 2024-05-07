@@ -18,6 +18,8 @@ use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\admin\FooterController;
 use App\Http\Controllers\admin\FooterInformasiController;
 use App\Http\Controllers\admin\FooterKebijakanController;
+use App\Http\Controllers\admin\KebijakanPrivasiController;
+use App\Http\Controllers\admin\SyaratController;
 use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,7 +42,9 @@ Route::get('/tentang', [FrontpageController::class, 'tentang'])->name('frontpage
 Route::get('/harga', [FrontpageController::class, 'harga'])->name('frontpage.harga');
 Route::get('/blog', [FrontpageController::class, 'blog'])->name('frontpage.blog');
 Route::get('/kontak', [FrontpageController::class, 'kontak'])->name('frontpage.kontak');
-Route::get('/footer', [FrontpageController::class, 'footer'])->name('frontpage.footer');
+Route::get('/kebijakan', [FrontpageController::class, 'kebijakan'])->name('frontpage.kebijakan');
+Route::get('/syarat', [FrontpageController::class, 'syarat'])->name('frontpage.syarat');
+Route::get('/faq', [FrontpageController::class, 'faq'])->name('frontpage.faq');
 
 //Login Admin
 Route::get('/admin', [LoginController::class, 'index'])->name('login');
@@ -99,7 +103,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('fiturkami/{id}/edit', [FiturKamiController::class, 'edit'])->name('fiturkami.edit');
     Route::put('fiturkami/{id}/update', [FiturKamiController::class, 'update'])->name('fiturkami.update');
     Route::delete('fiturkami/{fiturkami}/delete', [FiturKamiController::class, 'delete'])->name('fiturkami.delete');
-<<<<<<< HEAD
 
     // Tentang
     Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
@@ -130,8 +133,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
 
     Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
     Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
-});
-=======
 
     // Tentang
     Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
@@ -162,7 +163,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
 
     Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
     Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
+
+    //Kebijakan Privasi
+    Route::get('/kebijakan', [KebijakanPrivasiController::class, 'index'])->name('kebijakan.index');
+    Route::put('/kebijakan/update{id}', [KebijakanPrivasiController::class, 'update'])->name('kebijakan.update');
+
+    //Syarat
+    Route::get('/admin/syarat', [SyaratController::class, 'index'])->name('syarat.index');
+    Route::put('/syarat{id}', [SyaratController::class, 'update'])->name('syarat.update');
 });
 
-
->>>>>>> 82f719f06ff663912a5b49c95598b22e1439c3a0
