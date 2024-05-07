@@ -54,8 +54,10 @@
                                 <a class="" href="{{ route('frontpage.faq') }}">{{ $footer_informasi->faq }}</a>
                             </li>
                             <li>
-                                <a class=""
+                                <a class="" HEAD
                                     href="{{ route('frontpage.kontak') }}i">{{ $footer_informasi->kontak_kami }}</a>
+
+                                href="{{ route('frontpage.kontak') }}">{{ $footer_informasi->kontak_kami }}</a>
                             </li>
                         </ul>
                     </div>
@@ -66,11 +68,11 @@
                         <ul class="footer-menu">
                             <li>
                                 <a class=""
-                                    href="https://www.forstaff.id/kebijakan-privasi">{{ $footer_kebijakan->kebijakan }}</a>
+                                    href="{{ route('frontpage.syarat') }}">{{ $footer_kebijakan->kebijakan }}</a>
                             </li>
                             <li>
                                 <a class=""
-                                    href="https://www.forstaff.id/syarat-kebutuhan">{{ $footer_kebijakan->syarat }}</a>
+                                    href="{{ route('frontpage.kebijakan') }}">{{ $footer_kebijakan->syarat }}</a>
                             </li>
                         </ul>
                         <img src="{{ asset('/storage/public/' . $footer_kebijakan->icon_app1) }}"

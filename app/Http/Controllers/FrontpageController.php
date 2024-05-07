@@ -95,4 +95,7 @@ public function tentang(){
     public function faq(){
         return view('frontpage.page.faq');
     }
+
 }
+
+
