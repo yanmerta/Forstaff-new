@@ -21,8 +21,8 @@
 
                     <div class="mb-3">
                         <label for="subtitle_about" class="form-label">Subtitle About:</label>
-                        <input type="text" name="subtitle_about" class="form-control" value="{{ $about[0]->subtitle_about }}"
-                            required>
+                        <input type="text" name="subtitle_about" class="form-control"
+                            value="{{ $about[0]->subtitle_about }}" required>
                     </div>
 
                     <div class="mb-3">
@@ -33,8 +33,8 @@
                     <div class="mb-3">
                         <label for="image" class="form-label">Image:</label><br>
                         <input type="file" name="image" class="form-control-file">
-                        <img src="{{ asset('/storage/public/' . $about[0]->image) }}" width="50"
-                            alt="Current Image">
+                        <img src="{{ asset('/storage/public/' . $about[0]->image) }}" width="50" alt="Current Image">
+                    </div>
 
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>

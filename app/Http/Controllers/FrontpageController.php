@@ -15,6 +15,7 @@ use App\Models\HomeInformasi;
 
 use App\Models\HomeServis;
 use App\Models\KebijakanPrivasi;
+use App\Models\KontakKami;
 use App\Models\Syarat;
 use App\Models\Team;
 use App\Models\Tentang;
@@ -132,6 +133,7 @@ public function tentang(){
         $footer = Footer::first();
         $footer_informasi = FooterInformasi::all();
         $footer_kebijakan = FooterKebijakan::all();
+        $kontaks = KontakKami::all();
 
         $pageTitle = 'Kontak Kami - Forstaff';
 
@@ -139,6 +141,7 @@ public function tentang(){
             'footer'=> $footer,
             'footer_informasi'=> $footer_informasi[0],
             'footer_kebijakan'=> $footer_kebijakan[0],
+            'kontaks'=> $kontaks[0],
             'pageTitle' => $pageTitle,
             'active' => 'kontak'
         ]);

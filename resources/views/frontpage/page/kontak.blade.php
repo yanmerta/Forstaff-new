@@ -33,29 +33,29 @@
                     <div class="col-md-4">
                         <div class="contact-infos">
                             <div class="contact-info">
-                                <h3 class="title">Alamat Kami</h3>
-                                <p class="description"> PT. Guna Teknologi Nusantara </p>
-                                <div class="info"> <i class="ei ei-icon_map"></i> <span>Jl. Ratna No 68 G, Tonja,
-                                        Denpasar Utara, Denpasar - Bali . 80239</span> </div>
-                                <div class="info phone"> <i class="ei ei-icon_phone"></i> <span>(0361) 4746102</span>
+                                <h3 class="title">{{ $kontaks->title }}</h3>
+                                <p class="description"> {{ $kontaks->subtitle }} </p>
+                                <div class="info"> <i class="ei ei-icon_map"></i> <span>{{ $kontaks->alamat }}</span>
+                                </div>
+                                <div class="info phone"> <i class="ei ei-icon_phone"></i>
+                                    <span>{{ $kontaks->telepon }}</span>
                                 </div>
                                 <div class="info email"> <i class="ei ei-icon_mail_alt"></i>
-                                    <span>info@redsystem.id</span>
+                                    <span>{{ $kontaks->email }}</span>
                                 </div>
-                                <div class="info"> <i class="ei ei-info"></i> <span>Jam Kerja :</span> <span>Setiap
-                                        Hari (08.00 - 24.00)</span> </div>
+                                <div class="info"> <i class="ei ei-info"></i> <span>Jam Kerja :</span>
+                                    <span>{{ $kontaks->jam_kerja }}</span> </div>
                             </div>
                         </div>
                         <div id="footer" class="footer-nner widget footer-widget sosial-medias-background">
                             <ul class="footer-social-link margin-top30">
-                                <li><a href="https://www.facebook.com/forstaff.id" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://twitter.com/ForstaffA" target="_blank"><i
-                                            class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/forstaff.id/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/forstaff/" target="_blank"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="{{ $kontaks->icon1 }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="{{ $kontaks->icon2 }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{{ $kontaks->icon3 }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li><a href="{{ $kontaks->icon4 }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
