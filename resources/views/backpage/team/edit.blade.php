@@ -30,7 +30,7 @@
                                     @method('PUT')
 
                                     <div class="form-group">
-                                        <label for="name">Posisi</label>
+                                        <label for="name">Name</label>
                                         <input type="text" class="form-control" id="name"
                                             name="name" value="{{ $teams->name }}"
                                             placeholder="Enter Name">

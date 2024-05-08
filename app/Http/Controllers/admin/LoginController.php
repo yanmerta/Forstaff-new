@@ -27,7 +27,7 @@ class LoginController extends Controller
     {
         // Validate the form data
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
+            'name' => 'required',
             'password' => 'required',
         ]);
 
@@ -38,7 +38,7 @@ class LoginController extends Controller
                 ->withInput();
         }
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('name', 'password');
 
         // Attempt to authenticate the user
         if (Auth::attempt($credentials)) {

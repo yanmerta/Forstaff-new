@@ -28,6 +28,8 @@
     <meta name="msapplication-TileColor" content="#fa7070" />
     <meta name="theme-color" content="#fa7070" />
     <link rel="stylesheet" href="https://www.forstaff.id/assets/assets/css/base.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body id="home-version-1" class="home-version-4" data-style="default">
