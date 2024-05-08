@@ -124,7 +124,26 @@
     <!--end::Modals-->
     <!--begin::Javascript-->
     <script>
-        var hostUrl = "assets/";
+        // Ambil elemen FORSTAFF
+        const forstaffLogo = document.querySelector('.aside-logo span');
+
+        // Ambil elemen tombol drawer
+        const drawerToggle = document.getElementById('kt_aside_toggle');
+
+        // Tambahkan event listener untuk tombol drawer
+        drawerToggle.addEventListener('click', function() {
+            // Periksa apakah FORSTAFF sedang ditampilkan
+            if (forstaffLogo.style.display !== 'none') {
+                // Jika iya, sembunyikan FORSTAFF
+                forstaffLogo.style.display = 'none';
+            } else {
+                // Jika tidak, tampilkan FORSTAFF
+                forstaffLogo.style.display = 'inline-block';
+            }
+        });
+    </script>
+
+    var hostUrl = "assets/";
     </script>
     <!--begin::Global Javascript Bundle(used by all pages)-->
     <script src="{{ asset('assets/template_admin/demo1/dist/assets/plugins/global/plugins.bundle.js') }}"></script>
