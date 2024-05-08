@@ -13,35 +13,35 @@
                             <strong>{{ $footer->nama_perusahaan }}</strong>
                         </div>
                         <div class="info">
-                            <i class="ei ei-icon_map"></i>
+                            <i class="fa fa-map"></i>
                             <span>{{ $footer->alamat }}</span>
                         </div>
                         <div class="info phone">
-                            <i class="ei ei-icon_phone"></i> <span>{{ $footer->nomer_telepon }}</span>
+                            <i class="fa fa-phone"></i> <span>{{ $footer->nomer_telepon }}</span>
                         </div>
                         <div class="info email">
-                            <i class="ei ei-icon_mail_alt"></i>
+                            <i class="fa fa-envelope"></i>
                             <span>{{ $footer->email }}</span>
                         </div>
                         <div class="info">
-                            <i class="ei ei-info"></i> <span>{{ $footer->jam_kerja }}</span>
+                            <i class="fa fa-info-circle"></i> <span>{{ $footer->jam_kerja }}</span>
                         </div>
                         <ul class="footer-social-link margin-top30">
                             <li>
                                 <a href="{{ $footer->link_fb }}" title="Forstaff Apps" target="_blank"><i
-                                        class="fab fa-facebook-f"></i></a>
+                                        class="fa fa-facebook-f"></i></a>
                             </li>
                             <li>
                                 <a href="{{ $footer->link_twitter }}" title="Forstaff Apps" target="_blank"><i
-                                        class="fab fa-twitter"></i></a>
+                                        class="fa fa-twitter"></i></a>
                             </li>
                             <li>
                                 <a href="{{ $footer->link_instagram }}" title="Forstaff Apps" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
+                                        class="fa fa-instagram"></i></a>
                             </li>
                             <li>
                                 <a href="{{ $footer->link_link }}" title="Forstaff Apps" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a>
+                                        class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -56,8 +56,6 @@
                             <li>
                                 <a class=""
                                     href="{{ route('frontpage.kontak') }}i">{{ $footer_informasi->kontak_kami }}</a>
-                                <a class=""
-                                    href="{{ route('frontpage.kontak') }}">{{ $footer_informasi->kontak_kami }}</a>
                             </li>
                         </ul>
                     </div>

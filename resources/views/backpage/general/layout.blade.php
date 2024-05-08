@@ -58,12 +58,10 @@
                 <!--begin::Brand-->
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <!--begin::Logo-->
-                    <a href="../../demo1/dist/index.html">
-                        <img alt="Logo"
-                            src="{{ asset('assets/template_admin/demo1/dist/assets/media/logos/forstaff.png') }}"
-                            class="h-45px logo" />
-                        <span class="ml-2 text-white font-semibold" style="font-size: 1.5em;">FORSTAFF</span>
-                    </a>
+                    <img alt="Logo"
+                        src="{{ asset('assets/template_admin/demo1/dist/assets/media/logos/forstaff.png') }}"
+                        class="h-45px logo" />
+                    <span class="ml-2 text-white font-semibold" style="font-size: 1.5em;">FORSTAFF</span>
                     <!--end::Logo-->
                     <!--begin::Aside toggler-->
                     <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"

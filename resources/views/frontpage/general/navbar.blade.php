@@ -13,44 +13,30 @@
     <div class="menu-wrapper" data-top="992">
         <ul class="site-main-menu">
             <li class="{{ $active === 'beranda' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.beranda') }}">Beranda</a>
+                <a class="{{ $active === 'beranda' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.beranda') }}">Beranda</a>
             </li>
             <li class="{{ $active === 'fitur' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.fitur') }}">Fitur</a>
+                <a class="{{ $active === 'fitur' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.fitur') }}">Fitur</a>
             </li>
             <li class="{{ $active === 'tentang' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.tentang') }}">Tentang</a>
+                <a class="{{ $active === 'tentang' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.tentang') }}">Tentang</a>
             </li>
             <li class="{{ $active === 'harga' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.harga') }}">Harga</a>
+                <a class="{{ $active === 'harga' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.harga') }}">Harga</a>
             </li>
             <li class="{{ $active === 'blog' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.blog') }}">Blog</a>
+                <a class="{{ $active === 'blog' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.blog') }}">Blog</a>
             </li>
             <li class="{{ $active === 'kontak' ? 'active' : '' }}">
-                <a class="" href="{{ route('frontpage.kontak') }}">Kontak Kami</a>
+                <a class="{{ $active === 'kontak' ? 'current_page' : '' }}"
+                    href="{{ route('frontpage.kontak') }}">Kontak Kami</a>
             </li>
         </ul>
-        {{-- <ul class="site-main-menu">
-            <li>
-                <a class="current_page" href="{{ route('frontpage.beranda') }}">Beranda</a>
-            </li>
-            <li>
-                <a class="" href="{{ route('frontpage.fitur') }}">Fitur</a>
-            </li>
-            <li>
-                <a class="" href="{{ route('frontpage.tentang') }}">Tentang</a>
-            </li>
-            <li>
-                <a class="" href="{{ route('frontpage.harga') }}">Harga</a>
-            </li>
-            <li>
-                <a class="" href="{{ route('frontpage.blog') }}">Blog</a>
-            </li>
-            <li>
-                <a class="" href="{{ route('frontpage.kontak') }}">Kontak Kami</a>
-            </li>
-        </ul> --}}
         <div class="nav-right">
             <a href="#" target="_blank" class="nav-btn">Daftar Sekarang</a>
         </div>
