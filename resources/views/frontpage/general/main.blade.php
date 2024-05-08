@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <title>Forstaff</title>
+    <title>{{ $pageTitle }}</title>
     <meta name="description"
         content="Forstaff aplikasi Human Resource Terbaik untuk Perusahaan Anda. Forstaff hadir sebagai solusi manajemen HRD perusahaan yang menghasilkan KPI untuk menunjang keputusan strategis perusahaan anda." />
     <meta name="keywords" content="aplikasi, human resource, manajemen HRD, keputusan strategis" />
