@@ -20,6 +20,7 @@ class AboutController extends Controller
         $validatedData = $request->validate([
             'title_about' => 'required',
             'subtitle_about' => 'required',
+            'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,svg,gif',
             // Add validation for other fields as needed
         ]);
@@ -33,6 +34,7 @@ class AboutController extends Controller
 
         $about->title_about = $validatedData['title_about'];
         $about->subtitle_about = $validatedData['subtitle_about'];
+        $about->description = $validatedData['description'];
         // Update other fields as needed
 
         $about->save();
