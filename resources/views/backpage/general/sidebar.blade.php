@@ -87,7 +87,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.homebutton.index') }}">
+                        <a class="menu-link" href="{{ route('admin.homebutton.index') }}" title="Home Button">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -95,7 +95,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.homeinformasi.index') }}">
+                        <a class="menu-link" href="{{ route('admin.homeinformasi.index') }}" title="Home Informasi">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -103,7 +103,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.homeservis.index') }}">
+                        <a class="menu-link" href="{{ route('admin.homeservis.index') }}" title="Home Servis">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -133,7 +133,7 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.fitur.index') }}">
+                        <a class="menu-link" href="{{ route('admin.fitur.index') }}" title="Fitur">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -141,7 +141,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.fiturkami.index') }}">
+                        <a class="menu-link" href="{{ route('admin.fiturkami.index') }}" title="Fitur Kami">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -172,15 +172,15 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.about.index') }}">
+                        <a class="menu-link" href="{{ route('admin.about.index') }}" title="Tentang Kami">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
-                            <span class="menu-title">Abouts</span>
+                            <span class="menu-title">Tentang Kami</span>
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a class="menu-link" href="{{ route('admin.abouttim.index') }}">
+                        <a class="menu-link" href="{{ route('admin.abouttim.index') }}" title="Aboust Team">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>

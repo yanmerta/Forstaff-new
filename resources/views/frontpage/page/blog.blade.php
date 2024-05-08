@@ -2,14 +2,14 @@
 @section('content')
     <section class="banner banner-one page-banner height-banner">
         <div class="circle-shape" data-parallax='{"y" : 230}'><img
-                src="https://www.forstaff.id/assets/media/banner/circle-shape.png" alt="circle" title="circle"
-                width="800" height="800"></div>
+                src="https://www.forstaff.id/assets/media/banner/circle-shape.png" alt="circle" title="circle" width="800"
+                height="800"></div>
         <div class="container">
             <div class="page-title-wrapper">
                 <h1 class="page-title">Blog</h1>
                 <ul class="bradcurmed color-white">
-                    <li><a href="{{ route('frontpage.beranda') }}" rel="noopener noreferrer">Beranda</a></li>
-                    <li>Blog</li>
+                    <li><a href="{{ route('frontpage.beranda') }}">Beranda</a></li>
+                    <li>&gt; Blog</li>
                 </ul>
             </div>
         </div> <svg class="circle" data-parallax='{"x" : -200}' xmlns="http://www.w3.org/2000/svg"
@@ -31,4 +31,3 @@
         </div>
     </div>
 @endsection
-

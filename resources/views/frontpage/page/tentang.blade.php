@@ -32,27 +32,15 @@
                     <div class="about-content">
                         <div class="section-title text-center">
                             <h3 class="sub-title wow pixFadeUp">{{ $about->title_about }}</h3>
-                            <h2 class="title wow pixFadeUp" data-wow-delay="0.3s"> Aplikasi HRD Terbaik dan paling
-                                efisien </h2>
+                            <h2 class="title wow pixFadeUp" data-wow-delay="0.3s">{{ $about->subtitle_about }}
+                            </h2>
                         </div>
                         <div class="video-thumbnail margin-bottom30" data-wow-delay="0.4s"> <img
-                                src="https://www.forstaff.id/assets/media/about/tentang-forstaff.jpg" alt="Tentang Forstaff"
+                                src="{{ asset('/storage/public/' . $about->image) }}" alt="Tentang Forstaff"
                                 title="Tentang Forstaff" width="1070" height="599">
                         </div>
-                        <p class="description wow pixFadeUp" data-wow-delay="0.6s" align="justify"> Forstaff
-                            adalah aplikasi manajemen HRD yang dikembangkan oleh RED SYSTEM (PT GUNA TEKNOLOGI
-                            NUSANTARA) dengan menggunakan teknologi dan Expert Analysis terbaik. Teknologi yang
-                            digunakan untuk mengembangkan aplikasi ini adalah teknologi yang sama digunakan pada
-                            persuahaan besar seperti google dan facebook. Walaupun aplikasi ini adalah aplikasi Web
-                            Base Online, namun untuk kecepatan akan dijamin sama bahkan mampu melebihi aplikasi
-                            berbasis offline. Flow HRD yang diimplementasikan pada aplikasi ini dibuat oleh pakar
-                            pakar berpengalaman yang ahli dibidang Human Resource Management. Aplikasi ini juga
-                            dikembangkan dengan berpedoman kepada aturan aturan yang berlaku di Indonesia sehingga
-                            nantinya akan sangat aman di terapkan untuk mengambil keputusan mengenai karyawan
-                            ataupun perusahaan anda. Aplikasi ini diyakini mampu meningkatkan efisiensi dan
-                            produktifitas perusahaan lewat pengukuran pengukuran yang dilakukan selama proses
-                            berjalanya aplikasi. Forstaff adalah apliaksi revolusioner yang akan membuat bisnis anda
-                            menjadi lebih efisien. </p>
+                        <p class="description wow pixFadeUp" data-wow-delay="0.6s" align="justify">
+                            {{ $about->description }}</p>
                     </div>
                 </div>
             </div>
@@ -61,8 +49,8 @@
     <section class="teams">
         <div class="container">
             <div class="section-title text-center">
-                <h3 class="sub-title wow pixFadeUp">Tim Kami</h3>
-                <h2 class="title wow pixFadeUp" data-wow-delay="0.3s">Tim Terbaik dari Kami</h2>
+                <h3 class="sub-title wow pixFadeUp">{{ $aboutTim->title_tim }}</h3>
+                <h2 class="title wow pixFadeUp" data-wow-delay="0.3s">{{ $aboutTim->subtitle_tim }}</h2>
             </div>
             <div class="row">
                 @foreach ($teams as $key => $teams)

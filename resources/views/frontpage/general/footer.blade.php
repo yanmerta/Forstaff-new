@@ -54,8 +54,8 @@
                                 <a class="" href="{{ route('frontpage.faq') }}">{{ $footer_informasi->faq }}</a>
                             </li>
                             <li>
-                                <a class=""
-                                    href="{{ route('frontpage.kontak') }}">{{ $footer_informasi->kontak_kami }}</a>
+                                <a class="" href="{{ route('frontpage.kontak') }}i">{{ $footer_informasi->kontak_kami }}</a>
+                                <a class="" href="{{ route('frontpage.kontak') }}">{{ $footer_informasi->kontak_kami }}</a>
                             </li>
                         </ul>
                     </div>
