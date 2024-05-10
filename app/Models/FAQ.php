@@ -5,19 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kontak2 extends Model
+class FAQ extends Model
 {
     use HasFactory;
-
-    protected $table = 'kontak2';
+    protected $table = 'faq';
     protected $primaryKey = 'id';
-    protected $guarded = ['id'];
-
     protected $fillable = [
-        'nama',
-        'email',
-        'subjek',
-        'pesan',
-        'maps',
+
     ];
 }

@@ -11,7 +11,7 @@ class KebijakanPrivasiController extends Controller
     public function index()
     {
         $kebijakan = KebijakanPrivasi::first(); // Menggunakan first() untuk mendapatkan satu instance
-        $pageTitle = 'Kebijakan';
+        $pageTitle = 'Kebijakan < Forstaff';
         return view('backpage.kebijakan.index', compact('kebijakan','pageTitle' ));
     }
 

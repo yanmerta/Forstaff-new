@@ -11,13 +11,13 @@ class AdminController extends Controller
     public function index()
     {
         $users = User::all(); 
-        $pageTitle = 'Admin | Data User';
+        $pageTitle = 'Data User < Forstaff';
         return view('backpage.masterAdmin.dataAdmin', compact('users', 'pageTitle'));
     }
 
     public function create()
     {
-        $pageTitle = 'Admin | Create Data User';
+        $pageTitle = 'Create Data User < Forstaff';
         return view('backpage.masterAdmin.createdataAdmin', compact('pageTitle'));
     } 
     public function store(Request $request)
@@ -48,7 +48,7 @@ class AdminController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        $pageTitle = 'Admin | Edit Data User';
+        $pageTitle = 'Edit Data User < Forstaff';
         return view('backpage.masterAdmin.editdataAdmin', compact('user', 'pageTitle'));
     }
 

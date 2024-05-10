@@ -10,7 +10,7 @@ class FooterInformasiController extends Controller
 {
     public function index(){
         $footer_informasi = FooterInformasi::all();
-        $pageTitle = 'footer_informasi';
+        $pageTitle = 'Footer Informasi < Forstaff';
         return view('backpage.footer_informasi.index', compact('footer_informasi','pageTitle' ));
     }
 
@@ -25,9 +25,9 @@ class FooterInformasiController extends Controller
         $footer_informasi = FooterInformasi::find($id);
 
         $footer_informasi->update([
-            'title' => $validatedData['title'], 
-            'faq' => $validatedData['faq'], 
-            'kontak_kami' => $validatedData['kontak_kami'], 
+            'title' => $validatedData['title'],
+            'faq' => $validatedData['faq'],
+            'kontak_kami' => $validatedData['kontak_kami'],
 
         ]);
 

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Price extends Model
 {
     use HasFactory;
+    protected $table = 'price';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+
+    ];
 }

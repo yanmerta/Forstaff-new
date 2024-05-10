@@ -11,7 +11,7 @@ class FormKontakController extends Controller
     public function index()
     {
         $formkontak = FormKontak::all();
-        $pageTitle = 'Kontak';
+        $pageTitle = 'Form Kontak < Forstaff';
         return view('backpage.formkontak.index', compact('formkontak', 'pageTitle'));
     }
 

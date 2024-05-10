@@ -11,7 +11,7 @@ class AboutTimController extends Controller
 
     public function index()
     {
-        $pageTitle = 'Tentang Tim';
+        $pageTitle = 'Tentang Tim < Forstaff';
         $aboutTim = AboutTim::all();
         return view('backpage.aboutTim.index', compact('aboutTim','pageTitle'));
     }

@@ -10,14 +10,14 @@ class TeamController extends Controller
 {
     public function index()
     {
-        $pageTitle = 'Data Tim';
+        $pageTitle = 'Data Tim < Forstaff';
         $teams = Team::all();
         return view('backpage.team.index', compact('teams','pageTitle'));
     }
 
     public function create()
     {
-        $pageTitle = 'Create New Team';
+        $pageTitle = 'Tambah Tim < Forstaff';
         return view('backpage.team.create', compact('pageTitle'));
     }
 
@@ -43,7 +43,7 @@ class TeamController extends Controller
     public function edit($id)
     {
         $teams = Team::find($id);
-        $pageTitle = 'Edit Data Team ' . $teams->name;
+        $pageTitle = 'Edit Tim Forstaff' . $teams->name;
         return view('backpage.team.edit', compact('teams', 'pageTitle'));
     }
 

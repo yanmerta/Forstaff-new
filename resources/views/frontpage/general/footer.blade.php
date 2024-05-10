@@ -66,11 +66,11 @@
                         <ul class="footer-menu">
                             <li>
                                 <a class=""
-                                    href="{{ route('frontpage.syarat') }}">{{ $footer_kebijakan->kebijakan }}</a>
+                                    href="{{ route('frontpage.kebijakan') }}">{{ $footer_kebijakan->kebijakan }}</a>
                             </li>
                             <li>
                                 <a class=""
-                                    href="{{ route('frontpage.kebijakan') }}">{{ $footer_kebijakan->syarat }}</a>
+                                    href="{{ route('frontpage.syarat') }}">{{ $footer_kebijakan->syarat }}</a>
                             </li>
                         </ul>
                         <img src="{{ asset('/storage/public/' . $footer_kebijakan->icon_app1) }}"

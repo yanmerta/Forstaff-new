@@ -10,14 +10,14 @@ class HomeServisController extends Controller
 {
     public function index()
     {
-        $pageTitle = 'Fitur Kami';
+        $pageTitle = 'Home Servis < Forstaff';
         $homeservis = HomeServis::all();
         return view('backpage.homeservis.index', compact('homeservis','pageTitle'));
     }
 
     public function create()
     {
-        $pageTitle = 'Create New Fitur';
+        $pageTitle = 'Create Home Servis < Forstaff';
         return view('backpage.homeservis.create', compact('pageTitle'));
     }
 
@@ -43,7 +43,7 @@ class HomeServisController extends Controller
     public function edit($id)
     {
         $homeservis = HomeServis::find($id);
-        $pageTitle = 'Edit Data Fitur ' . $homeservis->servis_title;
+        $pageTitle = 'Edit Home Servis < Forstaff' . $homeservis->servis_title;
         return view('backpage.homeservis.edit', compact('homeservis', 'pageTitle'));
     }
 

@@ -10,14 +10,14 @@ class HomeButtonController extends Controller
 {
     public function index()
     {
-        $pageTitle = 'Fitur Kami';
+        $pageTitle = 'Home Button < Forstaff';
         $homebutton = HomeButton::all();
         return view('backpage.homebutton.index', compact('homebutton','pageTitle'));
     }
 
     public function create()
     {
-        $pageTitle = 'Create New HomeButton';
+        $pageTitle = 'Create Home Button < Forstaff';
         return view('backpage.homebutton.create', compact('pageTitle'));
     }
 
@@ -41,7 +41,7 @@ class HomeButtonController extends Controller
     public function edit($id)
     {
         $homebutton = HomeButton::find($id);
-        $pageTitle = 'Edit Data Fitur ' . $homebutton->button_teks;
+        $pageTitle = 'Edit Home Button < Forstaff' . $homebutton->button_teks;
         return view('backpage.homebutton.edit', compact('homebutton', 'pageTitle'));
     }
 

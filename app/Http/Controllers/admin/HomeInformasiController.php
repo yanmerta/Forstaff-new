@@ -11,7 +11,7 @@ class HomeInformasiController extends Controller
     public function index()
     {
         $homeinformasi = HomeInformasi::all();
-        $pageTitle = 'Fitur';
+        $pageTitle = 'Home Informasi < Forstaff';
         return view('backpage.homeinformasi.index', compact('homeinformasi', 'pageTitle'));
     }
 

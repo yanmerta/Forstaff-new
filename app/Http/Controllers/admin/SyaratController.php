@@ -11,7 +11,7 @@ class SyaratController extends Controller
     public function index()
     {
         $syarats = Syarat::first();
-        $pageTitle = 'Syarat Kebutuhan';
+        $pageTitle = 'Syarat Kebutuhan < Forstaff';
         return view('backpage.syarat.index', compact('syarats', 'pageTitle'));
     }
 
@@ -23,7 +23,7 @@ class SyaratController extends Controller
         ]);
         $syarats = Syarat::findOrFail($id);
 
-        $syarats->update($validatedData); 
+        $syarats->update($validatedData);
 
         return redirect()->back()->with('success', 'Syarat updated successfully');
     }

@@ -9,7 +9,7 @@ class ContactController extends Controller
 {
     public function index(){
         $contacts = Contact::all();
-        $contact = 'Contact';
+        $contact = 'Kontak < Forstaff';
         // dd($data);
         return view('backpage.contact.index', compact('contacts','contact' ));
     }

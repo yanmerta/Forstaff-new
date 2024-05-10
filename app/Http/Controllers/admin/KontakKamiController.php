@@ -11,7 +11,7 @@ class KontakKamiController extends Controller
     public function index()
     {
         $kontaks = KontakKami::first();
-        $pageTitle = 'Kontak Kami';
+        $pageTitle = 'Kontak Kami < Forstaff';
         return view('backpage.kontak.index', compact('kontaks', 'pageTitle'));
     }
 
@@ -29,7 +29,7 @@ class KontakKamiController extends Controller
             'icon3' => 'required',
             'icon4' => 'required',
         ]);
-        
+
         $kontaks = KontakKami::findOrFail($id);
 
         $kontaks->update([

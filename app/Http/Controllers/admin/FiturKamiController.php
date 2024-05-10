@@ -10,14 +10,14 @@ class FiturKamiController extends Controller
 {
     public function index()
     {
-        $pageTitle = 'Fitur Kami';
+        $pageTitle = 'Fitur Kami < Forstaff';
         $fiturkami = FiturKami::all();
         return view('backpage.fiturKami.index', compact('fiturkami','pageTitle'));
     }
 
     public function create()
     {
-        $pageTitle = 'Create New Fitur';
+        $pageTitle = 'Create Fitur Kami < Forstaff';
         return view('backpage.fiturKami.create', compact('pageTitle'));
     }
 
@@ -43,7 +43,7 @@ class FiturKamiController extends Controller
     public function edit($id)
     {
         $fiturkami = FiturKami::find($id);
-        $pageTitle = 'Edit Data Fitur ' . $fiturkami->title_fiturkami;
+        $pageTitle = 'Edit Fitur Kami < Forstaff' . $fiturkami->title_fiturkami;
         return view('backpage.fiturkami.edit', compact('fiturkami', 'pageTitle'));
     }
 
