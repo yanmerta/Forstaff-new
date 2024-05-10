@@ -35,26 +35,26 @@
                             <div class="contact-info">
                                 <h3 class="title">{{ $kontaks->title }}</h3>
                                 <p class="description"> {{ $kontaks->subtitle }} </p>
-                                <div class="info"> <i class="ei ei-icon_map"></i> <span>{{ $kontaks->alamat }}</span>
+                                <div class="info"> <i class="fa fa-map"></i> <span>{{ $kontaks->alamat }}</span>
                                 </div>
-                                <div class="info phone"> <i class="ei ei-icon_phone"></i>
+                                <div class="info phone"> <i class="fa fa-phone"></i>
                                     <span>{{ $kontaks->telepon }}</span>
                                 </div>
-                                <div class="info email"> <i class="ei ei-icon_mail_alt"></i>
+                                <div class="info email"> <i class="fa fa-envelope"></i>
                                     <span>{{ $kontaks->email }}</span>
                                 </div>
-                                <div class="info"> <i class="ei ei-info"></i> <span>Jam Kerja :</span>
+                                <div class="info"> <i class="fa fa-info-circle"></i> <span>Jam Kerja :</span>
                                     <span>{{ $kontaks->jam_kerja }}</span> </div>
                             </div>
                         </div>
                         <div id="footer" class="footer-nner widget footer-widget sosial-medias-background">
                             <ul class="footer-social-link margin-top30">
-                                <li><a href="{{ $kontaks->icon1 }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <li><a href="{{ $kontaks->icon1 }}" target="_blank"><i class="fa fa-facebook-f"></i></a>
                                 </li>
-                                <li><a href="{{ $kontaks->icon2 }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="{{ $kontaks->icon3 }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <li><a href="{{ $kontaks->icon2 }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{{ $kontaks->icon3 }}" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
-                                <li><a href="{{ $kontaks->icon4 }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <li><a href="{{ $kontaks->icon4 }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                                 </li>
                             </ul>
                         </div>

@@ -157,4 +157,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/kontak', [KontakKamiController::class, 'index'])->name('kontak.index');
     Route::put('/kontak{id}', [KontakKamiController::class, 'update'])->name('kontak.update');
 
+<<<<<<< HEAD
+=======
+    // Form Kontak
+    Route::get('/formkontak', [FormKontakController::class,  'index'])->name('formkontak.index');
+    Route::put('/formkontak{id}', [FormKontakController::class,  'update'])->name('formkontak.update');
+>>>>>>> 6101d13d61b2413ba60a1b1df5f117f02309d892
 });
