@@ -9,13 +9,13 @@ use App\Http\Controllers\Admin\FiturKamiController;
 use App\Http\Controllers\admin\FooterController;
 use App\Http\Controllers\admin\FooterInformasiController;
 use App\Http\Controllers\admin\FooterKebijakanController;
+use App\Http\Controllers\admin\FormKontakController;
 use App\Http\Controllers\admin\HomeButtonController;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\HomeInformasiController;
 use App\Http\Controllers\admin\HomePromosiController;
 use App\Http\Controllers\admin\HomeServisController;
 use App\Http\Controllers\admin\KebijakanPrivasiController;
-use App\Http\Controllers\admin\Kontak2Controller;
 use App\Http\Controllers\admin\KontakKamiController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\admin\LogoutController;
@@ -25,6 +25,7 @@ use App\Http\Controllers\admin\SyaratController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -157,10 +158,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/kontak', [KontakKamiController::class, 'index'])->name('kontak.index');
     Route::put('/kontak{id}', [KontakKamiController::class, 'update'])->name('kontak.update');
 
-<<<<<<< HEAD
-=======
     // Form Kontak
     Route::get('/formkontak', [FormKontakController::class,  'index'])->name('formkontak.index');
     Route::put('/formkontak{id}', [FormKontakController::class,  'update'])->name('formkontak.update');
->>>>>>> 6101d13d61b2413ba60a1b1df5f117f02309d892
 });
