@@ -10,7 +10,7 @@ class AboutController extends Controller
 {
     public function index(){
         $about = About::all();
-        $pageTitle = 'Tentang';
+        $pageTitle = 'Tentang < Forstaff';
         // dd($data);
         return view('backpage.about.index', compact('about','pageTitle' ));
     }

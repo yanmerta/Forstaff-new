@@ -233,7 +233,7 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link" href="#">
+                        <a class="menu-link" href="{{ route('admin.harga.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -261,7 +261,7 @@
                 </span>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link" href="#">
+                        <a class="menu-link" href="{{ route('admin.blog.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -300,6 +300,7 @@
                 </div>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
+<<<<<<< HEAD
                         <a class="menu-link {{ request()->routeIs('admin.formkontak.index') ? 'menu-open active' : '' }}"
                             href="{{ route('admin.formkontak.index') }}">
                             <span class="menu-bullet">
@@ -307,10 +308,40 @@
                             </span>
                             <span class="menu-title">Form Kontak</span>
                         </a>
+=======
+                            <a class="menu-link {{ request()->routeIs('admin.formkontak.index') ? 'menu-open active' : '' }}"
+                                href="{{ route('admin.formkontak.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">Form Kontak</span>
+                            </a>
+>>>>>>> 1788690e6820cbc33807ce40383b13ecfae5603a
                     </div>
                 </div>
             </div>
 
+            <div class="menu-item">
+                <a class="menu-link {{ request()->routeIs('admin.faq.index') ? 'menu-open active' : '' }}"
+                    href="{{ route('admin.faq.index') }}" title="Faq" data-bs-toggle="tooltip"
+                    data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                    <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+                        <span class="svg-icon svg-icon-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12.7442084,3.27882877 L19.2473374,6.9949025 C19.7146999,7.26196679 20.003129,7.75898194 20.003129,8.29726722 L20.003129,15.7027328 C20.003129,16.2410181 19.7146999,16.7380332 19.2473374,17.0050975 L12.7442084,20.7211712 C12.2830594,20.9846849 11.7169406,20.9846849 11.2557916,20.7211712 L4.75266256,17.0050975 C4.28530007,16.7380332 3.99687097,16.2410181 3.99687097,15.7027328 L3.99687097,8.29726722 C3.99687097,7.75898194 4.28530007,7.26196679 4.75266256,6.9949025 L11.2557916,3.27882877 C11.7169406,3.01531506 12.2830594,3.01531506 12.7442084,3.27882877 Z M12,14.5 C13.3807119,14.5 14.5,13.3807119 14.5,12 C14.5,10.6192881 13.3807119,9.5 12,9.5 C10.6192881,9.5 9.5,10.6192881 9.5,12 C9.5,13.3807119 10.6192881,14.5 12,14.5 Z"
+                                    fill="currentColor" />
+                                <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4"
+                                    fill="currentColor" />
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </span>
+                    <span class="menu-title" title="Faq">FAQ</span>
+                </a>
+            </div>
             <div class="menu-item">
                 <a class="menu-link {{ request()->routeIs('admin.syarat.index') ? 'menu-open active' : '' }}"
                     href="{{ route('admin.syarat.index') }}" title="Syarat" data-bs-toggle="tooltip"

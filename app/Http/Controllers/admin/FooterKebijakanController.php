@@ -10,7 +10,7 @@ class FooterKebijakanController extends Controller
 {
     public function index(){
         $footer_kebijakan = FooterKebijakan::all();
-        $pageTitle = 'footer_kebijakan';
+        $pageTitle = 'Footer Kebijakan < Forstaff';
         return view('backpage.footer_kebijakan.index', compact('footer_kebijakan','pageTitle' ));
     }
 
@@ -34,9 +34,9 @@ class FooterKebijakanController extends Controller
         }
 
         $footer_kebijakan->update([
-            'title' => $validatedData['title'], 
-            'kebijakan' => $validatedData['kebijakan'], 
-            'syarat' => $validatedData['syarat'], 
+            'title' => $validatedData['title'],
+            'kebijakan' => $validatedData['kebijakan'],
+            'syarat' => $validatedData['syarat'],
 
         ]);
 

@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $pageTitle = 'Admin | Halaman Profil';
+        $pageTitle = 'Profil < Forstaff';
         $user = User::findOrFail(Auth::id());
         return view('backpage.profile.index', compact('user', 'pageTitle'));
     }
@@ -21,7 +21,7 @@ class ProfileController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id);
-    
+
         $request->validate([
             'name' => 'required|string|min:2|max:100',
             'email' => 'required|email|unique:users,email,' . $id . ',id',
@@ -29,10 +29,10 @@ class ProfileController extends Controller
             'password' => 'nullable|required_with:old_password|string|confirmed|min:6',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-    
+
         $user->name = $request->name;
         $user->email = $request->email;
-    
+
         if ($request->filled('old_password')) {
             if (Hash::check($request->old_password, $user->password)) {
                 $user->password = Hash::make($request->password);
@@ -44,7 +44,7 @@ class ProfileController extends Controller
                     ->withInput();
             }
         }
-    
+
         if ($request->hasFile('photo')) {
             if ($user->photo && Storage::exists('public/' . $user->photo)) {
                 Storage::delete('public/' . $user->photo);
@@ -52,11 +52,11 @@ class ProfileController extends Controller
             $fileName = $request->file('photo')->store('photos', 'public');
             $user->photo = $fileName;
         }
-    
+
         $user->save();
-    
+
         return back()->with('status', 'Profile updated successfully');
-    }    
+    }
     public function deletePhoto($id)
 {
     $user = User::find($id);

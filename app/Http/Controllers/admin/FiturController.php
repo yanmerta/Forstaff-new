@@ -11,7 +11,7 @@ class FiturController extends Controller
 {
     public function index(){
         $fiturs = FiturModel::all();
-        $pageTitle = 'Fitur';
+        $pageTitle = 'Fitur < Forstaff';
         return view('backpage.fitur.index', compact('fiturs','pageTitle' ));
     }
 

@@ -9,7 +9,7 @@ class DashboardController extends Controller
     {
         public function index(){
             // $data = Home::all();
-            $pageTitle = 'Admin | Dashboard';
+            $pageTitle = 'Dashboard < Forstaff';
             // dd($data);
             return view('backpage.dashboard.Dashboard',compact('pageTitle' ));
         }

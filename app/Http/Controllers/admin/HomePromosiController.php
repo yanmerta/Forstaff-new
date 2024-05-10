@@ -10,7 +10,7 @@ class HomePromosiController extends Controller
 {
     public function index(){
         $homepromosi = HomePromosi::all();
-        $pageTitle = 'Home Promosi';
+        $pageTitle = 'Home Promosi < Forstaff';
         return view('backpage.homepromosi.index', compact('homepromosi','pageTitle' ));
     }
 

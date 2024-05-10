@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $homes = Home::all();
-        $pageTitle = 'Home Data List';
+        $pageTitle = 'Home List < Forstaff';
         return view('backpage.home.homedatalist', compact('homes', 'pageTitle'));
     }
 

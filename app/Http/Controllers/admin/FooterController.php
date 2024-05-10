@@ -10,7 +10,7 @@ class FooterController extends Controller
 {
     public function index(){
         $footer = Footer::all();
-        $pageTitle = 'Footer';
+        $pageTitle = 'Footer < Forstaff';
         return view('backpage.footer.index', compact('footer','pageTitle' ));
     }
 
@@ -38,7 +38,7 @@ class FooterController extends Controller
         }
 
         $footer->update([
-            'title' => $validatedData['title'], 
+            'title' => $validatedData['title'],
             'nama_perusahaan' => $validatedData['nama_perusahaan'],
             'alamat' => $validatedData['alamat'],
             'nomer_telepon' => $validatedData['nomer_telepon'],

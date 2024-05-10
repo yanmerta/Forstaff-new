@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AboutTimController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\Admin\BlogsController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\Admin\FiturController;
 use App\Http\Controllers\Admin\FiturKamiController;
 use App\Http\Controllers\admin\FooterController;
@@ -25,8 +27,6 @@ use App\Http\Controllers\admin\SyaratController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
-
-
 
 
 
@@ -132,10 +132,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::put('team/{id}/update', [TeamController::class, 'update'])->name('team.update');
     Route::delete('/admin/team/{teams}/delete', [TeamController::class, 'destroy'])->name('team.delete');
 
-    // Harga
-    Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
-    Route::put('/harga/update{id}', [PriceController::class, 'update'])->name('harga.update');
-
     // footer
     Route::get('/footer-test', [FooterController::class, 'index'])->name('footer.index');
     Route::put('/footer/update{id}', [FooterController::class, 'update'])->name('footer.update');
@@ -161,4 +157,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     // Form Kontak
     Route::get('/formkontak', [FormKontakController::class,  'index'])->name('formkontak.index');
     Route::put('/formkontak{id}', [FormKontakController::class,  'update'])->name('formkontak.update');
+
+    // Harga
+    Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
+
+    // Blogs
+    Route::get('/blog', [BlogsController::class, 'index'])->name('blog.index');
+
+    // FAQ
+    Route::get('/faq', [FAQController::class, 'index'])->name('faq.index');
+
 });
