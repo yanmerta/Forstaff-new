@@ -60,7 +60,8 @@
                                     <img src="assets/template_admin/demo1/dist/assets/media/logos/logo-forstaff.png"
                                         class="img-fluid" width="150" height="auto">
                                 </a>
-                                <h4 class="mb-3">Selamat Datang, silahkan login akun forstaff anda</h4>
+                                <h4 class="mb-2" style="margin-top: 20px;">Selamat Datang, silahkan login akun
+                                    forstaff anda</h4>
                             </div>
                             <div class="from-group mb-3">
                                 <input class="form-control form-control-lg form-control-solid" type="text"
@@ -77,8 +78,7 @@
                                 @enderror
                             </div>
                             <div class="text-center mt-0 mb-3">
-                                <button type="submit" id="kt_sign_in_submit"
-                                        class="btn btn-primary m-btn--pill py-3">
+                                <button type="submit" id="kt_sign_in_submit" class="btn btn-primary m-btn--pill py-3">
                                     LOGIN
                                 </button>
                             </div>

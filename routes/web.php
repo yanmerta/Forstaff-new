@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\FooterKebijakanController;
 use App\Http\Controllers\admin\HomeButtonController;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\HomeInformasiController;
+use App\Http\Controllers\admin\HomePromosiController;
 use App\Http\Controllers\admin\HomeServisController;
 use App\Http\Controllers\admin\KebijakanPrivasiController;
 use App\Http\Controllers\admin\Kontak2Controller;
@@ -24,6 +25,7 @@ use App\Http\Controllers\admin\SyaratController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\FrontpageController;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -77,7 +79,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
   Route::get('/admin/home', [HomeController::class, 'index'])->name('home.index');
   Route::put('/home/{id}', [HomeController::class, 'update'])->name('home.update');
 
-
+    // Home Button
     Route::get('admin/homebutton', [HomeButtonController::class, 'index'])->name('homebutton.index');
     Route::get('homebutton/create', [HomeButtonController::class, 'create'])->name('homebutton.create');
     Route::post('homebutton/store', [HomeButtonController::class, 'store'])->name('homebutton.store');
@@ -85,6 +87,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::put('homebutton/{id}/update', [HomeButtonController::class, 'update'])->name('homebutton.update');
     Route::delete('/admin/homebutton/{homebutton}/delete', [HomeButtonController::class, 'destroy'])->name('homebutton.delete');
 
+    // Home Servis
     Route::get('admin/homeservis', [HomeServisController::class, 'index'])->name('homeservis.index');
     Route::get('homeservis/create', [HomeServisController::class, 'create'])->name('homeservis.create');
     Route::post('homeservis/store', [HomeServisController::class, 'store'])->name('homeservis.store');
@@ -92,9 +95,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::put('homeservis/{id}/update', [HomeServisController::class, 'update'])->name('homeservis.update');
     Route::delete('/admin/homeservis/{homeservis}/delete', [HomeServisController::class, 'destroy'])->name('homeservis.delete');
 
-
+    // Home Informasi
     Route::get('/homeinformasi',[HomeInformasiController::class, 'index'])->name('homeinformasi.index');
     Route::put('/homeinformasi/update/{id}', [HomeInformasiController::class, 'update'])->name('homeinformasi.update');
+
+    // Home Promosi
+    Route::get('/homepromosi',[HomePromosiController::class, 'index'])->name('homepromosi.index');
+    Route::put('/homepromosi/update/{id}', [HomePromosiController::class, 'update'])->name('homepromosi.update');
 
     // fitur
     Route::get('/fitur',[FiturController::class, 'index'])->name('fitur.index');
@@ -138,66 +145,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
     Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
 
-    // Tentang
-    Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
-    Route::put('/about/update{id}', [AboutController::class, 'update'])->name('about.update');
-
-    // About Tim
-    Route::get('admin/abouttim', [AboutTimController::class, 'index'])->name('abouttim.index');
-    Route::put('abouttim/{id}/update', [AboutTimController::class, 'update'])->name('abouttim.update');
-
-    // Team
-    Route::get('admin/team', [TeamController::class, 'index'])->name('team.index');
-    Route::get('team/create', [TeamController::class, 'create'])->name('team.create');
-    Route::post('team/store', [TeamController::class, 'store'])->name('team.store');
-    Route::get('team/{id}/edit', [TeamController::class, 'edit'])->name('team.edit');
-    Route::put('team/{id}/update', [TeamController::class, 'update'])->name('team.update');
-    Route::delete('/admin/team/{teams}/delete', [TeamController::class, 'destroy'])->name('team.delete');
-
-    // Harga
-    Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
-    Route::put('/harga/update{id}', [PriceController::class, 'update'])->name('harga.update');
-
-    // footer
-    Route::get('/footer-test', [FooterController::class, 'index'])->name('footer.index');
-    Route::put('/footer/update{id}', [FooterController::class, 'update'])->name('footer.update');
-
-    Route::get('/footer_informasi', [FooterInformasiController::class, 'index'])->name('footer_informasi.index');
-    Route::put('/footer_informasi/update{id}', [FooterInformasiController::class, 'update'])->name('footer_informasi.update');
-
-    Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
-    Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
-
-    // Tentang
-    Route::get('admin/about', [AboutController::class, 'index'])->name('about.index');
-    Route::put('/about/update{id}', [AboutController::class, 'update'])->name('about.update');
-
-    // About Tim
-    Route::get('admin/abouttim', [AboutTimController::class, 'index'])->name('abouttim.index');
-    Route::put('abouttim/{id}/update', [AboutTimController::class, 'update'])->name('abouttim.update');
-
-    // Team
-    Route::get('admin/team', [TeamController::class, 'index'])->name('team.index');
-    Route::get('team/create', [TeamController::class, 'create'])->name('team.create');
-    Route::post('team/store', [TeamController::class, 'store'])->name('team.store');
-    Route::get('team/{id}/edit', [TeamController::class, 'edit'])->name('team.edit');
-    Route::put('team/{id}/update', [TeamController::class, 'update'])->name('team.update');
-    Route::delete('/admin/team/{teams}/delete', [TeamController::class, 'destroy'])->name('team.delete');
-
-    // Harga
-    Route::get('/harga', [PriceController::class, 'index'])->name('harga.index');
-    Route::put('/harga/update{id}', [PriceController::class, 'update'])->name('harga.update');
-
-    // footer
-    Route::get('/footer-test', [FooterController::class, 'index'])->name('footer.index');
-    Route::put('/footer/update{id}', [FooterController::class, 'update'])->name('footer.update');
-
-    Route::get('/footer_informasi', [FooterInformasiController::class, 'index'])->name('footer_informasi.index');
-    Route::put('/footer_informasi/update{id}', [FooterInformasiController::class, 'update'])->name('footer_informasi.update');
-
-    Route::get('/footer_kebijakan', [FooterKebijakanController::class, 'index'])->name('footer_kebijakan.index');
-    Route::put('/footer_kebijakan/update{id}', [FooterKebijakanController::class, 'update'])->name('footer_kebijakan.update');
-
     //Kebijakan Privasi
     Route::get('/kebijakan', [KebijakanPrivasiController::class, 'index'])->name('kebijakan.index');
     Route::put('/kebijakan/update{id}', [KebijakanPrivasiController::class, 'update'])->name('kebijakan.update');
@@ -210,7 +157,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/kontak', [KontakKamiController::class, 'index'])->name('kontak.index');
     Route::put('/kontak{id}', [KontakKamiController::class, 'update'])->name('kontak.update');
 
-    // Kontak 2
-    Route::get('/kontak2', [Kontak2Controller::class, 'index'])->name('kontak2.index');
-    Route::put('/kontak2{id}', [Kontak2Controller::class, 'update'])->name('kontak2.update');
 });

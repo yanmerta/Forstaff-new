@@ -70,7 +70,7 @@ class FiturKamiController extends Controller
             'description' => $validatedData['description'],
         ]);
 
-        return redirect()->route('admin.fiturkami.index')->with('success', 'Fitur data updated successfully');
+        return redirect()->route('admin.fiturkami.index')->with('success', 'Fitur kami updated successfully');
     }
 
     public function delete($id)
@@ -78,6 +78,6 @@ class FiturKamiController extends Controller
         $fiturkami = FiturKami::findOrFail($id);
         $fiturkami->delete();
 
-        return redirect()->route('admin.fiturkami.index')->with('success','Fitur data deleted successfully');
+        return redirect()->route('admin.fiturkami.index')->with('success','Fitur Kami deleted successfully');
     }
 }

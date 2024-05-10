@@ -50,6 +50,6 @@ class FooterController extends Controller
             'link_twitter' => $validatedData['link_twitter'],
         ]);
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        return redirect()->back()->with('success', 'Footer data updated successfully');
     }
 }

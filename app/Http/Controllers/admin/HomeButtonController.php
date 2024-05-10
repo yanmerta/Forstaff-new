@@ -49,7 +49,6 @@ class HomeButtonController extends Controller
     {
         $validatedData = $request->validate([
             'button_teks' => 'required',
-            'button_image' => 'required|image|mimes:jpeg,png,jpg,svg,gif',
         ]);
 
         $homebutton = HomeButton::find($id);
@@ -65,7 +64,7 @@ class HomeButtonController extends Controller
             'button_teks' => $validatedData['button_teks'],
         ]);
 
-        return redirect()->route('admin.homebutton.index')->with('success', 'Fitur data updated successfully');
+        return redirect()->route('admin.homebutton.index')->with('success', 'Home Button updated successfully');
     }
 
     public function destroy($id)
@@ -73,6 +72,6 @@ class HomeButtonController extends Controller
         $homebutton = HomeButton::findOrFail($id);
         $homebutton->delete();
 
-        return redirect()->route('admin.homebutton.index')->with('success', 'User deleted successfully');
+        return redirect()->route('admin.homebutton.index')->with('success', 'Home Button deleted successfully');
     }
 }

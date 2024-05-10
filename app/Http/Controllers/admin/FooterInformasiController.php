@@ -31,6 +31,6 @@ class FooterInformasiController extends Controller
 
         ]);
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        return redirect()->back()->with('success', 'Footer Informasi updated successfully');
     }
 }

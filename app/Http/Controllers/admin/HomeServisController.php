@@ -50,27 +50,25 @@ class HomeServisController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'title_homeservis' => 'required',
-            'description' => 'required',
-            'image' => 'sometimes|image|mimes:jpeg,png,jpg,svg,gif',
-            // Add validation for other fields as needed
+            'servis_title' => 'required',
+            'servis_description' => 'required',
         ]);
 
-        $homeservis = homeservis::find($id);
+        $homeservis = HomeServis::find($id);
 
-        if($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('uploads','public');
+        if($request->hasFile('servis_image')) {
+            $imagePath = $request->file('servis_image')->store('uploads','public');
             $homeservis->update([
-                'image' => $imagePath,
+                'servis_image' => $imagePath,
             ]);
         }
 
         $homeservis->update([
-            'title_homeservis' => $validatedData['title_homeservis'],
-            'description' => $validatedData['description'],
+            'servis_title' => $validatedData['servis_title'],
+            'servis_description' => $validatedData['servis_description'],
         ]);
 
-        return redirect()->route('admin.homeservis.index')->with('success', 'Fitur data updated successfully');
+        return redirect()->route('admin.homeservis.index')->with('success', 'Home Servis updated successfully');
     }
 
     public function destroy($id)
@@ -78,7 +76,7 @@ class HomeServisController extends Controller
         $homeservis = HomeServis::findOrFail($id);
         $homeservis->delete();
 
-        return redirect()->route('admin.homeservis.index')->with('success', 'User deleted successfully');
+        return redirect()->route('admin.homeservis.index')->with('success', 'Home Servis deleted successfully');
     }
 }
 

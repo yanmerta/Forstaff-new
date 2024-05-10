@@ -25,6 +25,6 @@ class SyaratController extends Controller
 
         $syarats->update($validatedData); 
 
-        return redirect()->back()->with('success', 'syarat updated successfully');
+        return redirect()->back()->with('success', 'Syarat updated successfully');
     }
 }

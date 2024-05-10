@@ -116,6 +116,16 @@
                             <span class="menu-title">Home Servis</span>
                         </a>
                     </div>
+                    <div class="menu-item">
+                        <a class="menu-link
+                            {{ request()->routeIs('admin.homepromosi.index') ? 'menu-open active' : '' }}"
+                            href="{{ route('admin.homepromosi.index') }}" title="Home Servis">
+                            <span class="menu-bullet">
+                                <span class="bullet bullet-dot"></span>
+                            </span>
+                            <span class="menu-title">Home Promosi</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -290,8 +300,8 @@
                 </div>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('admin.kontak2.index') ? 'menu-open active' : '' }}"
-                            href="{{ route('admin.kontak2.index') }}">
+                        <a class="menu-link {{ request()->routeIs('admin.kontak.index') ? 'menu-open active' : '' }}"
+                            href="{{ route('admin.kontak.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>
@@ -323,7 +333,7 @@
                 </a>
             </div>
             <div class="menu-item">
-                <a class="menu-link {{ request()->routeIs('admin.syarat.index') ? 'menu-open active' : '' }}"
+                <a class="menu-link {{ request()->routeIs('admin.kebijakan.index') ? 'menu-open active' : '' }}"
                     href="{{ route('admin.kebijakan.index') }}" title="Data Admin" data-bs-toggle="tooltip"
                     data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                     <span class="menu-icon">

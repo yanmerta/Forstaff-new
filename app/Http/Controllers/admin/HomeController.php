@@ -48,7 +48,7 @@ class HomeController extends Controller
             'button_url' => $validatedData['button_url'],
         ]);
 
-        return redirect()->back()->with('success', 'home updated successfully');
+        return redirect()->back()->with('success', 'Home updated successfully');
     }
 }
 

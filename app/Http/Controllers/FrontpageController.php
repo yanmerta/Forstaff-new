@@ -19,6 +19,7 @@ use App\Models\KontakKami;
 use App\Models\Syarat;
 use App\Models\Team;
 use App\Models\Tentang;
+use App\Models\HomePromosi;
 use Illuminate\Http\Request;
 
 class FrontpageController extends Controller
@@ -31,6 +32,7 @@ class FrontpageController extends Controller
         $footer = Footer::first();
         $footer_informasi = FooterInformasi::all();
         $footer_kebijakan = FooterKebijakan::all();
+        $home_promosi = HomePromosi::all();
 
         $pageTitle = 'Forstaff';
 
@@ -44,7 +46,8 @@ class FrontpageController extends Controller
             'homebutton' => HomeButton::all(),
             'homeservis' => HomeServis::all(),
             'pageTitle' => $pageTitle,
-            'active' => 'beranda'
+            'active' => 'beranda',
+            'home_promosi' => $home_promosi[0],
         ]);
     }
 

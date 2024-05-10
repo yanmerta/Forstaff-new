@@ -38,6 +38,6 @@ class ContactController extends Controller
             // Update other fields as needed
         ]);
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        return redirect()->back()->with('success', 'Contact data updated successfully');
     }
 }

@@ -46,6 +46,6 @@ class HomeInformasiController extends Controller
             'button_teks' => $validatedData['button_teks'],
         ]);
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        return redirect()->back()->with('success', 'Home Informasi data updated successfully');
     }
 }

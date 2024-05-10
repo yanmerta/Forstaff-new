@@ -40,7 +40,7 @@ class FooterKebijakanController extends Controller
 
         ]);
 
-        return redirect()->back()->with('success', 'Fitur data updated successfully');
+        return redirect()->back()->with('success', 'Footer Kebijakan data updated successfully');
     }
 }
 

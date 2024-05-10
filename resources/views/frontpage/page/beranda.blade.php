@@ -189,12 +189,11 @@
         </div>
         <div class="container">
             <div class="action-content text-center wow pixFadeUp">
-                <h2 class="title">Langkah Menuju Autopilot</h2>
+                <h2 class="title">{{ $home_promosi->title }}</h2>
                 <p>
-                    Ciptakan lingkungan kerja yang bisa anda awasi hanya dengan satu
-                    aplikasi
+                    {{ $home_promosi->sub_title }}
                 </p>
-                <a href="{{ route('frontpage.harga') }}" class="pix-btn btn-light">Dapatkan Sekarang
+                <a href="{{ route('frontpage.harga') }}" class="pix-btn btn-light">{{ $home_promosi->button_teks }}</a>
                 </a>
             </div>
         </div>

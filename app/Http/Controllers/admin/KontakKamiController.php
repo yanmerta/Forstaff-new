@@ -45,6 +45,6 @@ class KontakKamiController extends Controller
             'icon4' => $validatedData['icon4'],
         ]);
 
-        return redirect()->back()->with('success', 'KontakKami updated successfully');
+        return redirect()->back()->with('success', 'Kontak Kami updated successfully');
     }
 }
