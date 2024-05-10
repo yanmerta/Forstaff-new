@@ -290,8 +290,8 @@
                 </div>
                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                     <div class="menu-item">
-                        <a class="menu-link {{ request()->routeIs('admin.kontak2.index') ? 'menu-open active' : '' }}"
-                            href="{{ route('admin.kontak2.index') }}">
+                        <a class="menu-link {{ request()->routeIs('admin.formkontak.index') ? 'menu-open active' : '' }}"
+                            href="{{ route('admin.formkontak.index') }}">
                             <span class="menu-bullet">
                                 <span class="bullet bullet-dot"></span>
                             </span>

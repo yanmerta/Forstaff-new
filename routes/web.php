@@ -210,7 +210,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'as' => 'admin.'],
     Route::get('/kontak', [KontakKamiController::class, 'index'])->name('kontak.index');
     Route::put('/kontak{id}', [KontakKamiController::class, 'update'])->name('kontak.update');
 
-    // Kontak 2
-    Route::get('/kontak2', [Kontak2Controller::class, 'index'])->name('kontak2.index');
-    Route::put('/kontak2{id}', [Kontak2Controller::class, 'update'])->name('kontak2.update');
+    // Form Kontak
+    Route::get('/formkontak', [FormKontakController::class,  'index'])->name('formkontak.index');
+    Route::put('/formkontak{id}', [FormKontakController::class,  'update'])->name('formkontak.update');
 });
